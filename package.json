@@ -22,13 +22,8 @@
     "dependencies": {
         "chart.js": "^2.7.3",
         "datatables": "^1.10.18",
-<<<<<<< HEAD
-        "masonry-layout": "^4.2.2",
-        "sweetalert2": "^7.29.0"
-=======
+        "sweetalert2": "^7.29.0",
         "font-awesome": "^4.7.0",
-        "gsap": "^2.0.2",
-        "masonry-layout": "^4.2.2"
->>>>>>> 569a291f99482047cdfb00992f6dc4c5324fd9cf
+        "gsap": "^2.0.2"
     }
 }
