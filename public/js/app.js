@@ -34156,13 +34156,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
   }
 });
 
-__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('scroll', function (e) {
-  // if ($('body').hasClass('admin')) {
-  //   ADMIN.scroll(e)
-  // } else {
-  //   FRONT.scroll(e)
-  // }
-});
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('scroll', function (e) {});
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function (e) {
   if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').hasClass('admin')) {
@@ -62830,9 +62824,11 @@ var Front = function () {
     key: 'ready',
     value: function ready() {
       if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).width() >= 992) {
-        this.setHomeSections(this.homeSections);
-        this.bindScroll();
-        this.navigateHome(this.homeNavItem);
+        if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main.home').length) {
+          this.setHomeSections(this.homeSections);
+          this.bindScroll();
+          this.navigateHome(this.homeNavItem);
+        }
       } else {
         __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle').click(function (e) {
           __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle, .header').toggleClass('opened');
@@ -62883,8 +62879,6 @@ var Front = function () {
 
         listItem.removeClass('active');
         _target.addClass('active');
-        console.log(section);
-
         __WEBPACK_IMPORTED_MODULE_0_jquery___default()('html, body').animate({
           scrollTop: section.offset().top
         }, 800);
@@ -62951,7 +62945,7 @@ var Front = function () {
   }, {
     key: 'animateHomeSections',
     value: function animateHomeSections(section, offsetTop) {
-      __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["b" /* TweenMax */].to(section, 0.5, { ease: __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["a" /* Expo */].easeInOut, top: offsetTop, force3D: true });
+      __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["b" /* TweenMax */].to(section, 0.55, { ease: __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["a" /* Expo */].easeInOut, top: offsetTop, force3D: true });
     }
   }]);
 

@@ -41,6 +41,7 @@ return array(
     'App\\Modules\\Admin\\Insights\\Controllers\\InsightsController' => $baseDir . '/app/Modules/Admin/Insights/Controllers/InsightsController.php',
     'App\\Modules\\Admin\\Layouts\\Controllers\\LayoutsController' => $baseDir . '/app/Modules/Admin/Layouts/Controllers/LayoutsController.php',
     'App\\Modules\\Admin\\Login\\Controllers\\LoginController' => $baseDir . '/app/Modules/Admin/Login/Controllers/LoginController.php',
+    'App\\Modules\\Front\\Cart\\Controllers\\CartController' => $baseDir . '/app/Modules/Front/Cart/Contollers/CartController.php',
     'App\\Modules\\Front\\Home\\Controllers\\HomeController' => $baseDir . '/app/Modules/Front/Home/Controllers/HomeController.php',
     'App\\Modules\\ModulesServiceProvider' => $baseDir . '/app/Modules/ModulesServiceProvider.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

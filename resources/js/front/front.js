@@ -14,9 +14,11 @@ export default class Front {
 
   ready () {
     if ($(window).width() >= 992) {
-      this.setHomeSections(this.homeSections)
-      this.bindScroll()
-      this.navigateHome(this.homeNavItem)
+      if ($('.main.home').length) {
+        this.setHomeSections(this.homeSections)
+        this.bindScroll()
+        this.navigateHome(this.homeNavItem)
+      }
     } else {
       $('.menu-toggle').click(e => {
         $('.menu-toggle, .header').toggleClass('opened')
@@ -65,8 +67,6 @@ export default class Front {
 
       listItem.removeClass('active')
       _target.addClass('active')
-      console.log(section);
-
       $('html, body').animate({
         scrollTop: section.offset().top
       }, 800)
@@ -127,7 +127,6 @@ export default class Front {
   }
 
   animateHomeSections (section, offsetTop) {
-    TweenMax.to(section, 0.5, { ease: Expo.easeInOut, top: offsetTop, force3D: true })
-
+    TweenMax.to(section, 0.55, { ease: Expo.easeInOut, top: offsetTop, force3D: true })
   }
 }

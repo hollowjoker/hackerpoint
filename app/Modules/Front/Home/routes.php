@@ -7,3 +7,10 @@ Route::group(['prefix' => '/', 'namespace' => '\App\Modules\Front\Home\Controlle
 	// echo 1;
 });
 
+Route::group(['prefix' => '/cart', 'namespace' => '\App\Modules\Front\Cart\Controllers', 'middleware' => ['web']], function(){
+	Route::get('/', 'CartController@index')->name('cart.index');
+	// echo 1;
+});
+
+
+

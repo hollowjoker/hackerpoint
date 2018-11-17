@@ -24,6 +24,9 @@
   margin-top: rem(60);
 }
 
+.no-border {
+  border: none !important;
+}
 
 .shadowed {
   -webkit-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
@@ -117,6 +120,24 @@
   border: 1px solid $muted;
   border-radius: rem(30);
   color: $primaryText;
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: 400;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
+  text-align: center;
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
+  }
+}
+
+.btn--primary-bordered {
+  background-color: $light;
+  border: 1px solid $primary;
+  color: $primary;
+  cursor: pointer;
   display: inline-block;
   font-size: rem(18);
   font-weight: 400;

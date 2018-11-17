@@ -75,7 +75,6 @@
             object-fit: cover;
             @media(max-width: 991px) {
               height: 400px;
-              // width: 100%;
             }
             @media(max-width: 767px) {
               height: 200px;
@@ -138,6 +137,43 @@
       &__info {
         margin-bottom: 30px;
       }
+    }
+  }
+  &.cart {
+    padding-top: 75px;
+    .section {
+      background-color: $light;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: none;
+      min-height: 100vh;
+      padding-top: 75px;
+      position: relative;
+    }
+  }
+  .cart__table {
+    width: 100%;
+    thead {
+      td {
+        background-color: $muted;
+      }
+    }
+    tbody {
+      td {
+
+      }
+    }
+    td {
+      border-bottom: 1px solid #ebebeb;
+      border-right: 1px solid #ebebeb;
+      font-size: rem(15);
+      text-transform: capitalize;
+      padding: 20px 10px;
+      text-align: center;
+      font-weight: 500;
+      vertical-align: middle;
+      white-space: nowrap;
     }
   }
 }
