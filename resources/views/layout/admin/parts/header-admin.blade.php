@@ -16,8 +16,14 @@
             Red Ribbon <i class="material-icons">arrow_drop_down</i>
             <ul class="app-header__profile-name-dropdown">
                 <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
+            <li><a href="{{ route('admin.logout') }}">Logout</a></li>
             </ul>
         </div>
+    </div>
+    <div class="app-header__menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 </header>

@@ -13,6 +13,7 @@ export default class Admin {
     this.initDataTable();
     this.initLogin();
     this.initInsights();
+    this.initAppHeaderMenuToggle();
   }
 
   initDataTable() {
@@ -30,6 +31,13 @@ export default class Admin {
       }
     });
   }
+  
+  initAppHeaderMenuToggle() {
+    $('.app-header__menu-toggle').click(function() {
+      $(this).toggleClass('open');
+      $('.app-sidebar').toggleClass('open');
+    });
+  }
 
   initLogin() {
     $('#loginForm').submit(function(){
@@ -44,7 +52,23 @@ export default class Admin {
           window.location.href = URL+"/admin/dashboard";
         }
         else{
-          alert(returnData.message);
+          var message = "";
+
+          if (typeof returnData.message == 'string') {
+            message += returnData.message;
+          }
+          else {
+              Object.keys(returnData.message).forEach(function(key) {
+                message += '<p>' + returnData.message[key] + '</p>';
+              })
+          }
+          
+          swal({
+            type: 'error',
+            title: 'Oops...',
+            html: message,
+            confirmButtonColor: '#684AEE',
+          })
         }
         // console.log(returnData.length);
       });

@@ -7,6 +7,7 @@ return [
             'Dashboard',
             'Layouts',
             'Insights',
+            'Orders'
         ],
         'Front' => [
             'Home',

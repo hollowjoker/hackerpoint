@@ -8,7 +8,7 @@ Route::group(['prefix' => '/admin/login', 'namespace' => '\App\Modules\Admin\Log
 });
 
 Route::group(['prefix' => '/admin/logout', 'namespace' => '\App\Modules\Admin\Login\Controllers', 'middleware' => ['web']], function(){
-	Route::get('/', 'LoginController@logout')->name('login.logout');
+	Route::get('/', 'LoginController@logout')->name('admin.logout');
 });
 
 
