@@ -3,74 +3,29 @@
 @section('content')
     <section>
         <div class="container-fluid">
-            <div class="page-header">
-                <i class="material-icons">dashboard</i> Dashboard
-                <ul class="page-header__crumbs">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Detailed</a></li>
-                </ul>
-            </div>
-            <table id="dtDashboard" class="table table-hover table-striped" data-location="{{ route('dashboard.get.analytics') }}">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Date of Birth</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                {{-- <tbody>
-                    <tr>
-                        <td>Isabelo Nicolas II</td>
-                        <td>October 26, 1995</td>
-                        <td>
-                            <button class="btn btn-default btn-sm"><i class="material-icons">edit</i>Edit</button>
-                            <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Isabelo Nicolas II</td>
-                        <td>October 26, 1995</td>
-                        <td>
-                            <button class="btn btn-default btn-sm"><i class="material-icons">edit</i>Edit</button>
-                            <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Isabelo Nicolas II</td>
-                        <td>October 26, 1995</td>
-                        <td>
-                            <button class="btn btn-default btn-sm"><i class="material-icons">edit</i>Edit</button>
-                            <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i>Delete</button>
-                        </td>
-                    </tr>
-                </tbody>--}}
-            </table>
+            <br/>
+            <br/>
+            <h1>Welcome John,</h1>
+            <p>Take your next step.</p>
+            <br/>
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-lg-6">
                     <div class="panel">
-                        <header class="panel__head">
-                            Panel Title
-                        </header>
-                        <main class="panel__body">
-                            <canvas id="insights-top-products" width="800" height="450"></canvas>
-                        </main>
-                        <footer class="panel__footer">
-                            Footer
-                        </footer>
+                        <div class="panel__body">
+                            <h4>Add your items</h4>
+                            <p>Create and manage your items in one place.</p>
+                            <a href="#" class="btn btn-primary">Add Item</a>
+                            <a href="#" class="btn">View Items</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-6">
+                <div class="col-lg-6">
                     <div class="panel">
-                        <header class="panel__head">
-                            Panel Title
-                        </header>
-                        <main class="panel__body">
-                            <canvas id="insights-revenue" width="800" height="450"></canvas>
-                        </main>
-                        <footer class="panel__footer">
-                            Footer
-                        </footer>
+                        <div class="panel__body">
+                            <h4>See your store insights</h4>
+                            <p>Check/review your store's analytics in an easy and convenient way.</p>
+                            <a href="#" class="btn btn-primary">View Insights</a>
+                        </div>
                     </div>
                 </div>
             </div>

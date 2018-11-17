@@ -16,9 +16,12 @@ $(document).ready(() => {
 })
 
 $(window).on('scroll', e => {
-  // if ($('body').hasClass('admin')) {
-  //   ADMIN.scroll(e)
-  // } else {
-  //   FRONT.scroll(e)
-  // }
+})
+
+$(window).on('load', e => {
+  if ($('body').hasClass('admin')) {
+    ADMIN.ready()
+  } else {
+    FRONT.load(e)
+  }
 })

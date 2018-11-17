@@ -14,16 +14,33 @@
     padding-top: 75px;
     position: absolute;
     right: 0;
-    // transition: all 0.4s ease-in-out;
+    @media (max-width: 991px) {
+      box-shadow: none;
+      min-height: 0;
+      padding: 60px 0;
+      position: relative;
+    }
     &.current-section {
       top: 0;
     }
     &-home {
       background-image: url('../../img/home.jpg');
+      @media(max-width: 991px) {
+        min-height: 100vh;
+      }
+      .home--welcome {
+        @media(max-width: 991px) {
+          background-color: rgba(255, 255, 255 , 0.8);
+          padding: 15px;
+        }
+      }
     }
     h2 {
       color: $primaryText;
       font-size: rem(48);
+      @media(max-width: 576px) {
+        font-size: rem(36);
+      }
     }
     h4,p {
       font-weight: 300;
@@ -37,14 +54,31 @@
       // position: relative;
       &__grid {
         margin: 0 auto;
-        width: 2000px;
+        @media(max-width: 991px) {
+          width: 2000px;
+        }
+        @media(max-width: 767px) {
+          width: 1000px;
+        }
         &-item {
           overflow: hidden;
+          width: 20%;
+          @media(max-width: 991px) {
+            width: 100%;
+          }
+          @media(max-width: 767px) {
+            width: 200px;
+          }
           img {
             display: block;
-            height: 400px;
+            height: 200px;
             object-fit: cover;
-            width: 400px;
+            @media(max-width: 991px) {
+              height: 400px;
+            }
+            @media(max-width: 767px) {
+              height: 200px;
+            }
           }
           &-info {
             background-color: rgba(255,255,255,0.8);
@@ -73,10 +107,10 @@
           &-price {
             p {
               // color: $primary;
-              font-size: rem(18);
+              font-size: rem(16);
               font-weight: 600;
               span {
-                font-size: rem(16);
+                font-size: rem(14);
                 font-style: italic;
                 font-weight: 400;
                 text-decoration: line-through;
@@ -103,6 +137,43 @@
       &__info {
         margin-bottom: 30px;
       }
+    }
+  }
+  &.cart {
+    padding-top: 75px;
+    .section {
+      background-color: $light;
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: none;
+      min-height: 100vh;
+      padding-top: 75px;
+      position: relative;
+    }
+  }
+  .cart__table {
+    width: 100%;
+    thead {
+      td {
+        background-color: $muted;
+      }
+    }
+    tbody {
+      td {
+
+      }
+    }
+    td {
+      border-bottom: 1px solid #ebebeb;
+      border-right: 1px solid #ebebeb;
+      font-size: rem(15);
+      text-transform: capitalize;
+      padding: 20px 10px;
+      text-align: center;
+      font-weight: 500;
+      vertical-align: middle;
+      white-space: nowrap;
     }
   }
 }

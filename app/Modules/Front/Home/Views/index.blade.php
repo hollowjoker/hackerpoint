@@ -4,9 +4,11 @@
     <section id="home" class="section current-section section-home d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            <h2><span class="txt-strong">HOME</span><span class="txt-light">Ipsum</span></h2>
-            <h4>Sed ut ultrices purus, sed gravida quam. Vestibulum ornare sed metus eget pharetra. Integer sagittis ligula scelerisque, luctus arcu eget, consectetur turpis.</h4>
+          <div class="col-md-12 col-lg-6">
+            <div class="home--welcome">
+              <h2><span class="txt-strong">HOME</span><span class="txt-light">Ipsum</span></h2>
+              <h4>Sed ut ultrices purus, sed gravida quam. Vestibulum ornare sed metus eget pharetra. Integer sagittis ligula scelerisque, luctus arcu eget, consectetur turpis.</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -20,7 +22,7 @@
               <p>Nulla sollicitudin eget ante et euismod. Duis sollicitudin hendrerit mauris, non mollis diam semper at. Nulla aliquam velit quis purus tincidunt, non porttitor quam varius. In ullamcorper pulvinar rutrum. Integer dignissim elit ac nisl interdum pulvinar.</p>
               <p>Vestibulum efficitur posuere luctus. Aenean pulvinar scelerisque sem, quis interdum libero pulvinar in. Phasellus ac augue in nibh sollicitudin laoreet. Sed in blandit augue, ac cursus ante. Etiam odio purus, accumsan nec mauris ut, viverra volutpat augue.</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-md-30">
               <img class="img-fluid shadowed" src="{{ URL::asset('/images/about.jpg') }}" alt="">
             </div>
           </div>
@@ -29,12 +31,14 @@
     <section id="prod" class="section section-shop d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center position-relative">
-          <div class="col-lg-5">
+          <div class="col-12">
             <h2><span class="txt-strong">PRODUCTS</span></h2>
             <p>Cras dictum, tellus eget maximus sollicitudin, nisl quam facilisis tortor, at viverra odio quam eu purus. Aliquam posuere condimentum nulla, eget feugiat diam posuere et. Curabitur pretium sit amet est pellentesque posuere. Integer dui mauris, varius sit amet metus tincidunt, maximus dictum elit. Duis at cursus mauris, ut sodales nisi. Quisque et urna nec tortor eleifend pulvinar. Suspendisse varius nisl vel risus elementum, sit amet dignissim mi cursus.</p>
             <a href="/" class="btn--link">Browse all products</a>
           </div>
-          <div class="col-lg-7 position-relative ov-x-scroll">
+        </div>
+        <div class="row mt-30px">
+          <div class="col-12 position-relative ov-x-scroll">
             <div class="section-shop__grid d-flex">
               <div class="section-shop__grid-item position-relative">
                 <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-1.jpg') }}" alt="">
@@ -164,15 +168,17 @@
     <section id="srvcs" class="section section-srvcs d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center position-relative">
-          <div class="col-lg-5">
+          <div class="col-12">
             <h2><span class="txt-strong">SERVICES</span></h2>
             <p>Cras dictum, tellus eget maximus sollicitudin, nisl quam facilisis tortor, at viverra odio quam eu purus. Aliquam posuere condimentum nulla, eget feugiat diam posuere et. Curabitur pretium sit amet est pellentesque posuere. Integer dui mauris, varius sit amet metus tincidunt, maximus dictum elit. Duis at cursus mauris, ut sodales nisi. Quisque et urna nec tortor eleifend pulvinar. Suspendisse varius nisl vel risus elementum, sit amet dignissim mi cursus.</p>
             <a href="/" class="btn--link">Browse all services</a>
           </div>
-          <div class="col-lg-7 position-relative ov-x-scroll">
+        </div>
+        <div class="row mt-30px">
+          <div class="col-12 position-relative ov-x-scroll">
             <div class="section-shop__grid d-flex">
               <div class="section-shop__grid-item position-relative">
-                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/sr-1.jpg') }}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-1.jpg') }}" alt="">
                 <div class="section-shop__grid-item-info d-flex align-items-center justify-content-center flex-column">
                   <h5><a href="/">Lorem Ipsum</a></h5>
                   <div class="section-shop__grid-item-controls">
@@ -196,7 +202,7 @@
                 </div>
               </div>
               <div class="section-shop__grid-item position-relative">
-                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/sr-2.jpg') }}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-2.jpg') }}" alt="">
                 <div class="section-shop__grid-item-info d-flex align-items-center justify-content-center flex-column">
                   <h5><a href="/">Lorem Ipsum</a></h5>
                   <div class="section-shop__grid-item-controls">
@@ -220,7 +226,7 @@
                 </div>
               </div>
               <div class="section-shop__grid-item position-relative">
-                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/sr-3.jpg') }}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-3.jpg') }}" alt="">
                 <div class="section-shop__grid-item-info d-flex align-items-center justify-content-center flex-column">
                   <h5><a href="/">Lorem Ipsum</a></h5>
                   <div class="section-shop__grid-item-controls">
@@ -244,7 +250,7 @@
                 </div>
               </div>
               <div class="section-shop__grid-item position-relative">
-                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/sr-4.jpg') }}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-4.jpg') }}" alt="">
                 <div class="section-shop__grid-item-info d-flex align-items-center justify-content-center flex-column">
                   <h5><a href="/">Lorem Ipsum</a></h5>
                   <div class="section-shop__grid-item-controls">
@@ -268,7 +274,7 @@
                 </div>
               </div>
               <div class="section-shop__grid-item position-relative">
-                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/sr-5.jpg') }}" alt="">
+                <img class="img-fluid" src="{{ URL::asset('/images/shop-feat/pr-5.jpg') }}" alt="">
                 <div class="section-shop__grid-item-info d-flex align-items-center justify-content-center flex-column">
                   <h5><a href="/">Lorem Ipsum</a></h5>
                   <div class="section-shop__grid-item-controls">
@@ -319,7 +325,7 @@
               <a href="/"><i class="fa-instagram fa mr-10px"></i></a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 mt-md-30">
             <h5>SAY HELLO</h5>
             <form action="">
               <div class="form-group">

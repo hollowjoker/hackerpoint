@@ -1,3 +1,24 @@
+body {
+    .app {
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &.swal2-shown {
+        .app {
+            filter: blur(3px);
+        }
+    }
+    .swal2-container {
+        &.swal2-shown {
+            background-color: transparent;
+        }
+
+        .swal2-popup {
+            border-radius: 20% 2% 20% 2%;
+            box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.5);
+        }
+    }
+}
+
 // Bootstrap - Buttons
 .btn {
     margin: 2px 0;
