@@ -1,8 +1,9 @@
-var admin = {
-  settings: {
+export default class Admin {
+  constructor () {
 
-  },
-  init: function () {
+  }
+
+  init () {
     console.log('admin');
   }
 }

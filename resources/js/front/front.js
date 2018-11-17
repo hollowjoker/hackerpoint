@@ -1,8 +1,9 @@
-var front = {
-  settings: {
+export default class Front {
+  constructor () {
 
-  },
-  init: function () {
+  }
+
+  init () {
     console.log('front');
   }
 }
