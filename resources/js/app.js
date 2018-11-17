@@ -1,4 +1,3 @@
-import Masonry from 'masonry-layout'
 import $ from 'jquery'
 
 import Admin from './admin/Admin'
@@ -9,7 +8,8 @@ $(document).ready(() => {
     const admin = new Admin()
     admin.init()
   } else {
-    const front = new Front()
+    let masonryItems = document.querySelector('.section-shop__grid')
+    const front = new Front(masonryItems)
     front.init()
   }
 })

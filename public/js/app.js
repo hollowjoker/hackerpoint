@@ -416,24 +416,22 @@ module.exports = __webpack_require__(10);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_masonry_layout__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__admin_Admin__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__front_Front__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__admin_Admin__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__front_Front__ = __webpack_require__(18);
 
 
 
 
 
-
-__WEBPACK_IMPORTED_MODULE_1_jquery___default()(document).ready(function () {
-  if (__WEBPACK_IMPORTED_MODULE_1_jquery___default()('body').hasClass('admin')) {
-    var admin = new __WEBPACK_IMPORTED_MODULE_2__admin_Admin__["a" /* default */]();
+__WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
+  if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').hasClass('admin')) {
+    var admin = new __WEBPACK_IMPORTED_MODULE_1__admin_Admin__["a" /* default */]();
     admin.init();
   } else {
-    var front = new __WEBPACK_IMPORTED_MODULE_3__front_Front__["a" /* default */]();
+    var masonryItems = document.querySelector('.section-shop__grid');
+    var front = new __WEBPACK_IMPORTED_MODULE_2__front_Front__["a" /* default */](masonryItems);
     front.init();
   }
 });
@@ -12915,19 +12913,36 @@ var Admin = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_masonry_layout___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_masonry_layout__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+
+
 var Front = function () {
-  function Front() {
+  function Front(masonry) {
     _classCallCheck(this, Front);
+
+    this.masonry = masonry;
   }
 
   _createClass(Front, [{
     key: 'init',
     value: function init() {
-      console.log('front');
+      this.initMasonry();
+    }
+  }, {
+    key: 'initMasonry',
+    value: function initMasonry() {
+      // let grid = new Masonry(this.masonry, {
+      //   itemSelector: '.section-shop__grid-item',
+      //   columnWidth: 300,
+      //   horizontalOrder: false,
+      //   containerStyle: null,
+      //   // gutter: 30
+      // })
     }
   }]);
 
