@@ -61,6 +61,9 @@
                         <i class="material-icons">shopping_cart</i>
                       </button>
                     </div>
+                    <div class="section-shop__grid-item-price">
+                      <p>&#8369; 300.00 <span class="section-shop__grid-item-price"></span></p>
+                    </div>
                   </div>
                 </div>
                 <div class="section-shop__grid-item position-relative">
