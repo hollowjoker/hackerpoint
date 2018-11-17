@@ -20,6 +20,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
+        "datatables": "^1.10.18",
         "masonry-layout": "^4.2.2"
     }
 }
