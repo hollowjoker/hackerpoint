@@ -8,6 +8,7 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~datatables/media/css/jquery.dataTables.css';
 
 html,body {
   background-color: #fff;
@@ -17,6 +18,8 @@ html,body {
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+@import './vendoroverrides';
 
 // Admin
 @import './admin/template/sidebar-template';

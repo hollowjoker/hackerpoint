@@ -1,3 +1,5 @@
+import dataTable from 'datatables';
+import $ from 'jquery'
 export default class Admin {
   constructor () {
 
@@ -5,5 +7,10 @@ export default class Admin {
 
   init () {
     console.log('admin');
+    this.initDataTable();
+  }
+
+  initDataTable() {
+    $('#tae').dataTable();
   }
 }

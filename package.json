@@ -20,7 +20,7 @@
         "vue": "^2.5.17"
     },
     "dependencies": {
-        "masonry-layout": "^4.2.2",
-        "slick-carousel": "^1.8.1"
+        "datatables": "^1.10.18",
+        "masonry-layout": "^4.2.2"
     }
 }

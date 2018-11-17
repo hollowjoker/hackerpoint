@@ -1,19 +1,24 @@
-@extends('layout.admin.templates.sidebar-template')
+@extends('layout.admin.templates.default-template')
 
 @section('content')
 
-    <section>
-        <div class="container-fluid">
-            <div class="page-header">
-                <i class="material-icons">dashboard</i> Dashboard
-                <ul class="page-header__crumbs">
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">Detailed</a></li>
-                </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="usr">Email</label>
+                <input type="text" class="form-control" id="usr">
             </div>
-            asd
+            <div class="form-group">
+                <label for="pwd">Password</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
         </div>
-    </section>
+    </div>
+</div>
 
 @stop

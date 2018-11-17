@@ -15,13 +15,10 @@
         <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
     </head>
     <body>
-        <div class="app app--template-standard">
-            @include('layout.admin.parts.header-admin')
-            @include('layout.admin.parts.sidebar-admin')
+        <div class="app app--template-default">
             <main class="app-content">
                 @yield('content')
             </main>
-            @include('layout.admin.parts.footer-admin')
         </div>
         
         {{-- Scripts --}}
