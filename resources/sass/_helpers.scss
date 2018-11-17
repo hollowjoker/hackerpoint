@@ -4,8 +4,20 @@
   padding: 0 15px;
 }
 
+.mb-30px {
+  margin-bottom: rem(30);
+}
+
 .mr-5px {
   margin-right: rem(5);
+}
+
+.mr-10px {
+  margin-right: rem(10);
+}
+
+.mt-60px {
+  margin-top: rem(60);
 }
 
 
@@ -74,4 +86,24 @@
   &:hover i {
     color: $light;
   }
+}
+
+.form-group {
+  input, textarea {
+    border: 1px solid $primaryText;
+    border-radius: 8px;
+    display: block;
+    font-weight: 300;
+    outline: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+
 }

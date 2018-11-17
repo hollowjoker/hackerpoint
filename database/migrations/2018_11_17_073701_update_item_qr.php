@@ -13,9 +13,9 @@ class UpdateItemQr extends Migration
      */
     public function up()
     {
-        // Schema::table('items', function (Blueprint $table) {
-        //     $table->dropColumn('qr_file');
-        // });
+        Schema::table('items', function (Blueprint $table) {
+            $table->dropColumn('qr_file');
+        });
         Schema::table('items', function (Blueprint $table) {
             $table->text('qr_file')->after('description')->nullable();
         });  

@@ -74,5 +74,23 @@
         }
       }
     }
+    &-contact {
+      h5 {
+        margin-bottom: 20px;
+      }
+      &__info-wrapper {
+        a {
+          color: $primaryText;
+          font-size: rem(18);
+          transition: color 0.2s ease;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+      &__info {
+        margin-bottom: 30px;
+      }
+    }
   }
 }
