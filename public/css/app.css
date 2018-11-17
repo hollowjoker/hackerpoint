@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@charset "UTF-8";
 
+.shadowed {
+  -webkit-box-shadow: 11px 11px 19px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 11px 19px -3px rgba(0, 0, 0, 0.75);
+}
+
 .txt-strong {
   font-weight: 700;
 }
@@ -10744,14 +10749,42 @@ body {
 }
 
 .main .section {
+  background-color: #fff;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 75px;
+  padding-top: 75px;
   min-height: 100vh;
 }
 
 .main .section-home {
   background-image: url(/images/home.jpg?e610731e3290f3efafdfb345a6eab5ab);
+}
+
+.main .section h1 {
+  color: #333;
+  font-size: 4rem;
+}
+
+.main .section h4,
+.main .section p {
+  font-weight: 300;
+  font-size: 1.42857143rem;
+  line-height: 2.28571429rem;
+}
+
+.main .section p {
+  font-size: 1.14285714rem;
+}
+
+.main .section-shop {
+  position: relative;
+}
+
+.main .section-shop__grid {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw;
 }
 
