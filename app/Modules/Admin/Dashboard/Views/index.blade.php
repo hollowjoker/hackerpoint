@@ -1,3 +1,3 @@
-@extends('layout.admin.master')
+@extends('layout.admin.templates.sidebar-template')
 @section('content')
 @stop
