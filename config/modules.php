@@ -2,15 +2,13 @@
 
  return [ 
 	'modules' => [
-		'Admin' => [
-			'Login',
-			'Dashboard',
-			'Orders',
-			'Podiatrist',
-			'Practice',
-			'Reports',
-			'Leads',
-			'ApiKeys'
-		],
+			'Admin' => [
+				'Login',
+				'Dashboard'
+			],
+			'Front' => [
+				'Home',
+				'Dashboard'
+			]
 	]
 ];

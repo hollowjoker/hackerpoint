@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/admin/dashboard');
-});
+// Route::get('/', function () {
+    // return redirect('/dashboard');
+    // echo 1;
+// });
