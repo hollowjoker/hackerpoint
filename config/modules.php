@@ -7,7 +7,7 @@
 				'Dashboard'
 			],
 			'Front' => [
-				'',
+				'Home',
 				'Dashboard'
 			]
 	]

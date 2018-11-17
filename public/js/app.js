@@ -60,13 +60,18 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 11);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+>>>>>>> cb241f8cca65ee461a5361a620b3a078720fe4e7
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 "use strict";
 
 
@@ -371,12 +376,17 @@ module.exports = {
   extend: extend,
   trim: trim
 };
+=======
+__webpack_require__(1);
+module.exports = __webpack_require__(2);
+>>>>>>> cb241f8cca65ee461a5361a620b3a078720fe4e7
 
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 var g;
 
 // This works in non-strict mode
@@ -398,10 +408,13 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+=======
+>>>>>>> cb241f8cca65ee461a5361a620b3a078720fe4e7
 
 
 /***/ }),
 /* 2 */
+<<<<<<< HEAD
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47426,6 +47439,8 @@ if (false) {
 
 /***/ }),
 /* 43 */
+=======
+>>>>>>> cb241f8cca65ee461a5361a620b3a078720fe4e7
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

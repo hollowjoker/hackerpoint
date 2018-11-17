@@ -1,0 +1,12 @@
+.main {
+  .section {
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 75px;
+    min-height: 100vh;
+    &-home {
+      background-image: url('../../img/home.jpg');
+    }
+  }
+}
