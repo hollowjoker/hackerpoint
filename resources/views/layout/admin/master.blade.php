@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body class="fixed-nav bg-dark" id="page-top">
+    <body class="fixed-nav bg-dark admin" id="page-top">
         @include('layout.admin.header')
         {{-- @yield('content') --}}
     </body>

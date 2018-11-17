@@ -1,12 +1,34 @@
 .main {
   .section {
+    background-color: $light;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 75px;
+    padding-top: 75px;
     min-height: 100vh;
     &-home {
       background-image: url('../../img/home.jpg');
+    }
+    h1 {
+      color: $primaryText;
+      font-size: rem(56);
+    }
+    h4,p {
+      font-weight: 300;
+      font-size: rem(20);
+      line-height: rem(32);
+    }
+    p {
+      font-size: rem(16);
+    }
+    &-shop {
+      position: relative;
+      &__grid {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50vw;
+      }
     }
   }
 }
