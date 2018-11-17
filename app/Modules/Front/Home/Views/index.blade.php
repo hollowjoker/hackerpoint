@@ -20,7 +20,7 @@
               <p>Nulla sollicitudin eget ante et euismod. Duis sollicitudin hendrerit mauris, non mollis diam semper at. Nulla aliquam velit quis purus tincidunt, non porttitor quam varius. In ullamcorper pulvinar rutrum. Integer dignissim elit ac nisl interdum pulvinar.</p>
               <p>Vestibulum efficitur posuere luctus. Aenean pulvinar scelerisque sem, quis interdum libero pulvinar in. Phasellus ac augue in nibh sollicitudin laoreet. Sed in blandit augue, ac cursus ante. Etiam odio purus, accumsan nec mauris ut, viverra volutpat augue.</p>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-md-30">
               <img class="img-fluid shadowed" src="{{ URL::asset('/images/about.jpg') }}" alt="">
             </div>
           </div>

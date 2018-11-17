@@ -25861,9 +25861,11 @@ var Front = function () {
   _createClass(Front, [{
     key: 'ready',
     value: function ready() {
-      this.setHomeSections(this.homeSections);
-      this.bindScroll();
-      this.navigateHome(this.homeNavItem);
+      if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).width() >= 992) {
+        this.setHomeSections(this.homeSections);
+        this.bindScroll();
+        this.navigateHome(this.homeNavItem);
+      }
     }
   }, {
     key: 'scroll',
@@ -25871,20 +25873,12 @@ var Front = function () {
       var $e = e;
       var st = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).scrollTop();
       console.log(st);
-      if (st > this.lastScrollTop) {
-        console.log('down');
-      } else {
-        console.log('up');
-      }
+      if (st > this.lastScrollTop) {} else {}
       this.lastScrollTop = st;
     }
   }, {
     key: 'resize',
-    value: function resize(e) {
-      // this.homeSections.map((i, e) => {
-      //   tm.set
-      // })
-    }
+    value: function resize(e) {}
   }, {
     key: 'convertToArray',
     value: function convertToArray(htmlEntity) {
@@ -25895,7 +25889,6 @@ var Front = function () {
     value: function setHomeSections(section) {
       var tm = __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["b" /* TweenMax */];
       section.map(function (i, e) {
-        // console.log(e);
         if (i !== 0) {
           tm.set(e, { top: '-' + __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).height() });
         }

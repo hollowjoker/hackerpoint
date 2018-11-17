@@ -581,6 +581,12 @@ table.dataTable td {
   text-decoration: none;
 }
 
+@media (max-width: 991px) {
+  .mt-md-30 {
+    margin-top: 2.14285714rem;
+  }
+}
+
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -11342,12 +11348,28 @@ body {
   right: 0;
 }
 
+@media (max-width: 991px) {
+  .main .section {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    min-height: 0;
+    padding: 60px;
+    position: relative;
+  }
+}
+
 .main .section.current-section {
   top: 0;
 }
 
 .main .section-home {
   background-image: url(/images/home.jpg?e610731e3290f3efafdfb345a6eab5ab);
+}
+
+@media (max-width: 991px) {
+  .main .section-home {
+    min-height: 100vh;
+  }
 }
 
 .main .section h2 {
@@ -11370,9 +11392,21 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+  .main .section-shop__grid {
+    width: 2000px;
+  }
+}
+
 .main .section-shop__grid-item {
   overflow: hidden;
   width: 20%;
+}
+
+@media (max-width: 767px) {
+  .main .section-shop__grid-item {
+    width: 100%;
+  }
 }
 
 .main .section-shop__grid-item img {
@@ -11380,7 +11414,12 @@ body {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .main .section-shop__grid-item img {
+    height: 400px;
+  }
 }
 
 .main .section-shop__grid-item-info {

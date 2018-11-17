@@ -14,12 +14,20 @@
     padding-top: 75px;
     position: absolute;
     right: 0;
-    // transition: all 0.4s ease-in-out;
+    @media (max-width: 991px) {
+      box-shadow: none;
+      min-height: 0;
+      padding: 60px;
+      position: relative;
+    }
     &.current-section {
       top: 0;
     }
     &-home {
       background-image: url('../../img/home.jpg');
+      @media(max-width: 991px) {
+        min-height: 100vh;
+      }
     }
     h2 {
       color: $primaryText;
@@ -37,14 +45,24 @@
       // position: relative;
       &__grid {
         margin: 0 auto;
+        @media(max-width: 767px) {
+          width: 2000px;
+        }
         &-item {
           overflow: hidden;
           width: 20%;
+          @media(max-width: 767px) {
+            // height: 400px;
+            width: 100%;
+          }
           img {
             display: block;
             height: 200px;
             object-fit: cover;
-            width: 100%;
+            @media(max-width: 767px) {
+              height: 400px;
+              // width: 100%;
+            }
           }
           &-info {
             background-color: rgba(255,255,255,0.8);

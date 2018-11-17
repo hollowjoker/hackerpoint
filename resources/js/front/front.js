@@ -16,9 +16,11 @@ export default class Front {
   }
 
   ready () {
-    this.setHomeSections(this.homeSections)
-    this.bindScroll()
-    this.navigateHome(this.homeNavItem)
+    if ($(window).width() >= 992) {
+      this.setHomeSections(this.homeSections)
+      this.bindScroll()
+      this.navigateHome(this.homeNavItem)
+    }
   }
 
   scroll (e) {
@@ -26,17 +28,12 @@ export default class Front {
     let st = $(window).scrollTop()
     console.log(st);
     if (st > this.lastScrollTop) {
-      console.log('down');
     } else {
-      console.log('up');
     }
     this.lastScrollTop = st
   }
 
   resize (e) {
-    // this.homeSections.map((i, e) => {
-    //   tm.set
-    // })
   }
 
   convertToArray (htmlEntity) {
@@ -46,7 +43,6 @@ export default class Front {
   setHomeSections (section) {
     let tm = TweenMax
     section.map((i, e) => {
-      // console.log(e);
       if (i !== 0) {
         tm.set(e, { top: '-' + $(window).height() })
       }
