@@ -21,21 +21,22 @@ class InsightsController extends Controller
         $data = [];
         $user = Auth::guard('admin')->user();
 
-        $dataList = CF::model('Store')
-            ->leftJoin('item__categories','item__categories.store_id','stores.id')
-            ->leftJoin('items','items.item_category_id','item__categories.id')
+        $dataList = CF::model('User')
+            ->leftJoin('items','items.user_id','users.id')
             ->where(
                 [
-                    ['stores.id',$user->id]
+                    ['users.id',$user->id]
                 ]
             )
             ->select('items.click','items.rating','item_name')
+            ->limit('10')
+            ->orderBy('rating','desc')
             ->get();
         
         if(count($dataList)){
             foreach($dataList as $k => $each){
                 $data['item'][] = $each->item_name;
-                $data['count'][] = $each->click + $each->rating;
+                $data['count'][] = $each->click + ($each->rating * 5);
             }
         }
 
