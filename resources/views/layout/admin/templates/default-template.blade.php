@@ -13,6 +13,9 @@
         {{-- Stylesheets --}}
         <link rel="stylesheet" href="{!! asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') !!}">
         <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
+        <script>
+            var URL = window.location.origin;
+        </script>
     </head>
     <body class="admin">
         <div class="app app--template-default">
