@@ -22,8 +22,14 @@ class LayoutsController extends Controller
     {
         return view($this::$view_path . 'seller-signup');
     }
+
     public function insights()
     {
         return view($this::$view_path . 'insights');
+    }
+
+    public function product_add()
+    {
+        return view($this::$view_path . 'product-add');
     }
 }
