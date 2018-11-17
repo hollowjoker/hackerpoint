@@ -1,7 +1,7 @@
 @extends('layout.front.master')
 @section('content')
-  <main class="main">
-    <section id="home" class="section section-home d-flex align-items-center">
+  <main class="main home">
+    <section id="home" class="section current-section section-home d-flex align-items-center">
       <div class="container">
         <div class="row">
           <div class="col-6">
@@ -32,6 +32,7 @@
           <div class="col-lg-5">
             <h2><span class="txt-strong">PRODUCTS</span></h2>
             <p>Cras dictum, tellus eget maximus sollicitudin, nisl quam facilisis tortor, at viverra odio quam eu purus. Aliquam posuere condimentum nulla, eget feugiat diam posuere et. Curabitur pretium sit amet est pellentesque posuere. Integer dui mauris, varius sit amet metus tincidunt, maximus dictum elit. Duis at cursus mauris, ut sodales nisi. Quisque et urna nec tortor eleifend pulvinar. Suspendisse varius nisl vel risus elementum, sit amet dignissim mi cursus.</p>
+            <a href="/" class="btn--link">Browse all products</a>
           </div>
           <div class="col-lg-7 position-relative ov-x-scroll">
             <div class="section-shop__grid d-flex">
@@ -160,12 +161,13 @@
         </div>
       </div>
     </section>
-    <section id="srvcs" class="section section-srvcs">
+    <section id="srvcs" class="section section-srvcs d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center position-relative">
           <div class="col-lg-5">
             <h2><span class="txt-strong">SERVICES</span></h2>
             <p>Cras dictum, tellus eget maximus sollicitudin, nisl quam facilisis tortor, at viverra odio quam eu purus. Aliquam posuere condimentum nulla, eget feugiat diam posuere et. Curabitur pretium sit amet est pellentesque posuere. Integer dui mauris, varius sit amet metus tincidunt, maximus dictum elit. Duis at cursus mauris, ut sodales nisi. Quisque et urna nec tortor eleifend pulvinar. Suspendisse varius nisl vel risus elementum, sit amet dignissim mi cursus.</p>
+            <a href="/" class="btn--link">Browse all services</a>
           </div>
           <div class="col-lg-7 position-relative ov-x-scroll">
             <div class="section-shop__grid d-flex">
@@ -294,7 +296,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="section section-contact">
+    <section id="contact" class="section section-contact d-flex align-items-center">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">

@@ -537,7 +537,7 @@ table.dataTable td {
 
 .form-group input,
 .form-group textarea {
-  border: 1px solid #333;
+  border: 1px solid #e1e1e1;
   border-radius: 8px;
   display: block;
   font-weight: 300;
@@ -555,6 +555,26 @@ table.dataTable td {
 
 .form-group textarea {
   resize: none;
+}
+
+.btn--link {
+  background-color: transparent;
+  border: 1px solid #e1e1e1;
+  border-radius: 2.14285714rem;
+  color: #333;
+  display: block;
+  font-size: 1.28571429rem;
+  font-weight: 400;
+  padding: 10px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-align: center;
+}
+
+.btn--link:hover {
+  background-color: #684AEE;
+  color: #fff;
+  text-decoration: none;
 }
 
 /*!
@@ -11281,13 +11301,27 @@ body {
   width: 20px;
 }
 
+.main {
+  position: relative;
+}
+
 .main .section {
   background-color: #fff;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 75px;
+  bottom: 0;
+  -webkit-box-shadow: 0px 5px 19px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 19px -1px rgba(0, 0, 0, 0.75);
+  left: 0;
   min-height: 100vh;
+  padding-top: 75px;
+  position: absolute;
+  right: 0;
+}
+
+.main .section.current-section {
+  top: 0;
 }
 
 .main .section-home {
@@ -11308,10 +11342,6 @@ body {
 
 .main .section p {
   font-size: 1.14285714rem;
-}
-
-.main .section-shop {
-  position: relative;
 }
 
 .main .section-shop__grid {

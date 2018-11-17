@@ -90,7 +90,7 @@
 
 .form-group {
   input, textarea {
-    border: 1px solid $primaryText;
+    border: 1px solid $muted;
     border-radius: 8px;
     display: block;
     font-weight: 300;
@@ -106,4 +106,22 @@
     resize: none;
   }
 
+}
+
+.btn--link {
+  background-color: transparent;
+  border: 1px solid $muted;
+  border-radius: rem(30);
+  color: $primaryText;
+  display: block;
+  font-size: rem(18);
+  font-weight: 400;
+  padding: 10px;
+  transition: all 0.2s ease-in;
+  text-align: center;
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
+  }
 }

@@ -3,12 +3,22 @@ import $ from 'jquery'
 import Admin from './admin/Admin'
 import Front from './front/Front'
 
+const ADMIN = new Admin()
+const FRONT = new Front()
+
+
 $(document).ready(() => {
   if ($('body').hasClass('admin')) {
-    const admin = new Admin()
-    admin.init()
+    ADMIN.ready()
   } else {
-    const front = new Front()
-    front.init()
+    FRONT.ready()
   }
+})
+
+$(window).on('scroll', e => {
+  // if ($('body').hasClass('admin')) {
+  //   ADMIN.scroll(e)
+  // } else {
+  //   FRONT.scroll(e)
+  // }
 })

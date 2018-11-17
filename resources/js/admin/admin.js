@@ -1,16 +1,21 @@
 import dataTable from 'datatables';
 import $ from 'jquery'
 export default class Admin {
-  constructor () {
-
+  constructor (url) {
+    this.url = url
   }
 
-  init () {
+  ready () {
     console.log('admin');
     this.initDataTable();
   }
 
-  initDataTable() {
+  scroll (e) {
+    const $e = e
+    console.log($e);
+  }
+
+  initDataTable () {
     $('#tae').dataTable();
   }
 }
