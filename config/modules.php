@@ -1,14 +1,15 @@
-<?php 
+<?php
 
- return [ 
-	'modules' => [
-			'Admin' => [
-				'Login',
-				'Dashboard'
-			],
-			'Front' => [
-				'Home',
-				'Dashboard'
-			]
-	]
+return [
+    'modules' => [
+        'Admin' => [
+            'Login',
+            'Dashboard',
+            'Layouts',
+        ],
+        'Front' => [
+            'Home',
+            'Dashboard',
+        ],
+    ],
 ];
