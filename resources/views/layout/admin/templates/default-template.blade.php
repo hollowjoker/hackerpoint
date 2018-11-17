@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{!! asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') !!}">
         <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
     </head>
-    <body>
+    <body class="admin">
         <div class="app app--template-default">
             <main class="app-content">
                 @yield('content')

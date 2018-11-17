@@ -9,7 +9,7 @@
         box-shadow: 0 0 20px -5px rgba(0,0,0,0.25);
         display: flex;
             align-items: center;
-        padding: 8px 15px;
+        padding: 0 15px;
         position: fixed;
             top: 0;
             left: 0;
@@ -35,6 +35,7 @@
         }
 
         &__profile {
+            position: relative;
 
             &-photo {
                 margin-right: 8px;
@@ -43,10 +44,50 @@
             }
 
             &-name {
+                cursor: pointer;
+                display: inline-block;
+                padding: 20px 0;
                 text-decoration:  none;
+
+                &:hover {
+                    color: #684AEE;
+                }
+                
                 .material-icons {
                     margin-top: -4px;
                     vertical-align: middle;
+                }
+
+                &-dropdown {
+                    background-color: #fff;
+                    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+                    display: none;
+                    list-style-type: none;
+                    padding: 0;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    margin: 0;
+                    width: 175px;
+    
+                    li {
+                        display: block;
+    
+                        a {
+                            color: #000;
+                            display: block;
+                            padding: 8px 15px;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: #f0f0f9;
+                                color: #6750f2;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .app-header__profile-name-dropdown {
+                    display: block;
                 }
             }
         }
