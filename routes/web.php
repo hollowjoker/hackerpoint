@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return redirect('/dashboard');
+    // return redirect('/dashboard');
+    echo 1;
 });
