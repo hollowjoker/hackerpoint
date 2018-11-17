@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{!! asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') !!}">
         <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-sticker.png') }}" />
-        <title>HackDOG</title>
+        <title>HackDOG Manila</title>
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
