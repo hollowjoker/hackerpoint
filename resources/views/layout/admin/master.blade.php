@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body class="fixed-nav bg-dark" id="page-top">
-        @include('layout.header')
+        @include('layout.admin.header')
         {{-- @yield('content') --}}
     </body>
 
