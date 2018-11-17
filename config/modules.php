@@ -11,6 +11,8 @@ return [
         ],
         'Front' => [
             'Home',
+            'Cart',
+            'Checkout',
             'Dashboard',
         ],
     ],
