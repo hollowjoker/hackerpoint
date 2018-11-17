@@ -28,6 +28,7 @@ class DashboardController extends Controller
                 );
 
         $dataList = CF::model('User')->get();
+        return 1;
         return $dataList;
             
                                 $category->limit($length)

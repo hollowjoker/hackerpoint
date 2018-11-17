@@ -6,6 +6,7 @@ return [
             'Login',
             'Dashboard',
             'Layouts',
+            'Insights',
         ],
         'Front' => [
             'Home',

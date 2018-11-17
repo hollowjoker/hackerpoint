@@ -10568,32 +10568,48 @@ var Admin = function () {
     key: 'initInsights',
     value: function initInsights() {
       // Top Products
-      new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById('insights-top-products'), {
-        type: 'bar',
-        data: {
-          labels: ['Product 1', 'Product 2', 'Product 3', 'Product 4', 'Product 5'],
-          datasets: [{
-            label: 'Clicks and Views',
-            backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850'],
-            data: [32, 40, 10, 12, 23]
-          }]
-        },
-        options: {
-          legend: { display: false }
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
+        url: __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#insights-top-products').attr('data-route'),
+        type: 'get'
+      }).done(function (returnData) {
+        var length = !!returnData && !!returnData.item ? returnData.item.length : 0;
+        if (length) {
+          new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById('insights-top-products'), {
+            type: 'bar',
+            data: {
+              labels: returnData.item,
+              datasets: [{
+                label: 'Clicks and Views',
+                backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850'],
+                data: returnData.count
+              }]
+            },
+            options: {
+              legend: { display: false }
+            }
+          });
         }
       });
 
       // Revenue
-      new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById("insights-revenue"), {
-        type: 'line',
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-          datasets: [{
-            data: [32000, 16000, 64000, 61000, 32000, 16000, 32000, 16000, 64000, 61000, 32000, 16000],
-            label: "Revenue",
-            borderColor: "#3e95cd",
-            fill: true
-          }]
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
+        url: __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#insights-revenue').attr('data-route'),
+        type: 'get'
+      }).done(function (returnData) {
+        var length = !!returnData && !!returnData.months ? returnData.months.length : 0;
+        if (length) {
+          new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById("insights-revenue"), {
+            type: 'line',
+            data: {
+              labels: returnData.months,
+              datasets: [{
+                data: returnData.counts,
+                label: "Revenue",
+                borderColor: "#3e95cd",
+                fill: true
+              }]
+            }
+          });
         }
       });
     }
