@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import dataTable from 'datatables';
+<<<<<<< HEAD
 import swal from 'sweetalert2';
 import Chart from 'chart.js';
 
@@ -7,11 +8,26 @@ export default class Admin {
   constructor() {}
 
   init() {
+=======
+import $ from 'jquery'
+export default class Admin {
+  constructor (url) {
+    this.url = url
+  }
+
+  ready () {
+    console.log('admin');
+>>>>>>> 569a291f99482047cdfb00992f6dc4c5324fd9cf
     this.initDataTable();
     this.initInsights();
   }
 
-  initDataTable() {
+  scroll (e) {
+    const $e = e
+    console.log($e);
+  }
+
+  initDataTable () {
     $('#tae').dataTable();
   }
 

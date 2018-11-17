@@ -3,13 +3,22 @@ import $ from 'jquery'
 import Admin from './admin/Admin'
 import Front from './front/Front'
 
+const ADMIN = new Admin()
+const FRONT = new Front()
+
+
 $(document).ready(() => {
   if ($('body').hasClass('admin')) {
-    const admin = new Admin()
-    admin.init()
+    ADMIN.ready()
   } else {
-    let masonryItems = document.querySelector('.section-shop__grid')
-    const front = new Front(masonryItems)
-    front.init()
+    FRONT.ready()
   }
+})
+
+$(window).on('scroll', e => {
+  // if ($('body').hasClass('admin')) {
+  //   ADMIN.scroll(e)
+  // } else {
+  //   FRONT.scroll(e)
+  // }
 })
