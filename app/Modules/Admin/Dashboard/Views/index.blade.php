@@ -11,7 +11,7 @@
                     <li><a href="#">Detailed</a></li>
                 </ul>
             </div>
-            <table id="tae" class="table table-hover table-striped">
+        <table id="dtDashboard" class="table table-hover table-striped" data-location="{{ route('dashboard.get.analytics') }}">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -19,7 +19,7 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                {{-- <tbody>
                     <tr>
                         <td>Isabelo Nicolas II</td>
                         <td>October 26, 1995</td>
@@ -44,7 +44,7 @@
                             <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i>Delete</button>
                         </td>
                     </tr>
-                </tbody>
+                </tbody>--}}
             </table>
         </div>
     </section>
