@@ -5,20 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <link rel="stylesheet" href="{!! asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') !!}">
-        <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
         <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/logo-sticker.png') }}" />
         <title>HackDOG Manila</title>
-        
-        <!-- Fonts -->
+        {{-- Fonts --}}
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {{-- Stylesheets --}}
+        <link rel="stylesheet" href="{!! asset('bootstrap-4.1.1-dist/css/bootstrap.min.css') !!}">
+        <link rel="stylesheet" href="{!! asset('css/app.css') !!}">
     </head>
-    <body class="fixed-nav bg-dark admin" id="page-top">
-        @include('layout.admin.header')
-        {{-- @yield('content') --}}
+    <body>
+        <div class="app app--template-sidebar">
+            @include('layout.admin.parts.header-admin')
+            @include('layout.admin.parts.sidebar-admin')
+            <main class="app-content">
+                @yield('content')
+            </main>
+        </div>
+        
+        {{-- Scripts --}}
+        <script src="{!! asset('js/app.js') !!}"></script>
+        @yield('pageJs')
     </body>
-
-    <script src="{!! asset('js/app.js') !!}"></script>
-    @yield('pageJs')
 </html>

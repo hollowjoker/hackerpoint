@@ -19,6 +19,10 @@ html,body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+// Admin
+@import './admin/template/sidebar-template';
+@import './admin/components/pageheader';
+
 // Front 
 @import './front/header';
 @import './front/main';

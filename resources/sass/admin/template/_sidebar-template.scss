@@ -1,0 +1,128 @@
+/**
+ * Sidebar Template
+ */
+.app--template-sidebar {
+
+    //  Header
+    .app-header {
+        background-color: #fff;
+        box-shadow: 0 0 20px -5px rgba(0,0,0,0.25);
+        display: flex;
+            align-items: center;
+        padding: 8px 15px;
+        position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        width: 100%;
+
+        &__logo {
+            width: 200px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__menu {
+            margin-left: auto;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &__profile {
+
+            &-photo {
+                margin-right: 8px;
+                max-width: 100%;
+                width: 45px;
+            }
+
+            &-name {
+                text-decoration:  none;
+                .material-icons {
+                    margin-top: -4px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    //  Sidebar
+    .app-sidebar {
+        background: #444;
+        background-color: #fafafa;
+        display: block;
+        height: 100vh;
+        overflow-y: scroll;
+        max-width: 80%;
+        padding: 30px 25px;
+        position: fixed;
+            top: 61px;
+            left: 0;
+            z-index: 998;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 250px;
+
+        &__menu {
+            margin-bottom: 30px;
+            margin-left: auto;
+
+            &-label {
+                color: $primary;
+                font-weight: bold;
+            }
+
+            &-navigation {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                .material-icons {
+                    color: #777;
+                    font-size: 25px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                }
+
+                li {
+                    display: block;
+
+                    a {
+                        color: #fff;
+                        color: #000;
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            transform: translateX(-100%);
+        }
+    }
+
+    //  Content
+    .app-content {
+        margin-left: 250px;
+        position: relative;
+        top: 61px;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @media (max-width: 991px) {
+            margin-left: 0;
+        }
+    }
+}
+
