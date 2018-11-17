@@ -1,0 +1,62 @@
+.main {
+  .section {
+    background-color: $light;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 75px;
+    min-height: 100vh;
+    &-home {
+      background-image: url('../../img/home.jpg');
+    }
+    h1 {
+      color: $primaryText;
+      font-size: rem(56);
+    }
+    h4,p {
+      font-weight: 300;
+      font-size: rem(20);
+      line-height: rem(32);
+    }
+    p {
+      font-size: rem(16);
+    }
+    &-shop {
+      position: relative;
+      &__grid {
+        margin: 0 auto;
+        width: 2000px;
+        &-item {
+          overflow: hidden;
+          img {
+            display: block;
+            height: 400px;
+            object-fit: cover;
+            width: 400px;
+          }
+          &-info {
+            background-color: rgba(255,255,255,0.7);
+            height: 100%;
+            flex-wrap: wrap;
+            left: 0;
+            // opacity: 0;
+            padding: 10px;
+            position: absolute;
+            // transform: scale(0.9);
+            transition: all 0.3s ease-out;
+            top: 0;
+            width: 100%;
+            h5 {
+              text-align: center;
+              width: 100%;
+            }
+          }
+          &:hover .section-shop__grid-item-info {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}

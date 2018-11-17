@@ -1,0 +1,63 @@
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  &__logo-wrapper {
+    font-size: rem(18);
+    h4 {
+      a {
+        color: $primaryText;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      margin: 0;
+    }
+  }
+  &__nav-wrapper {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        margin-right: 30px;
+        text-align: center;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          color: $primaryText;
+          font-weight: 700;
+          text-transform: uppercase;
+          transition: color 0.2s ease-in;
+          &:hover {
+            color: $primary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  &__controls-wrapper {
+    .header-control {
+      .btn-cart {
+        .btn-cart--count {
+          background-color: $primary;
+          border-radius: 50%;
+          color: $light;
+          font-size: rem(12);
+          font-weight: 500;
+          height: 20px;
+          position: absolute;
+          right: 0;
+          top: -10px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}

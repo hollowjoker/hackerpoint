@@ -451,6 +451,7 @@ class ComposerStaticInitfe8631dd647d8bdd180c599204197136
         'App\\Models\\User_Bank' => __DIR__ . '/../..' . '/app/Models/User_Bank.php',
         'App\\Models\\User_Info' => __DIR__ . '/../..' . '/app/Models/User_Info.php',
         'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/Admin/Dashboard/Controllers/DashboardController.php',
+        'App\\Modules\\Admin\\Layouts\\Controllers\\LayoutsController' => __DIR__ . '/../..' . '/app/Modules/Admin/Layouts/Controllers/LayoutsController.php',
         'App\\Modules\\Front\\Home\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Modules/Front/Home/Controllers/HomeController.php',
         'App\\Modules\\ModulesServiceProvider' => __DIR__ . '/../..' . '/app/Modules/ModulesServiceProvider.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
