@@ -10487,6 +10487,9 @@ body {
 .header {
   background: rgba(255, 255, 255, 0.8);
   padding: 25px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header__logo-wrapper {
@@ -10525,6 +10528,13 @@ body {
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
+  -webkit-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.header__nav-wrapper ul li a:hover {
+  color: #684AEE;
+  text-decoration: none;
 }
 
 .header__controls-wrapper .header-control .btn--custom {
@@ -10561,5 +10571,17 @@ body {
   -webkit-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
   vertical-align: middle;
+}
+
+.main .section {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 75px;
+  min-height: 100vh;
+}
+
+.main .section-home {
+  background-image: url(/images/home.jpg?e610731e3290f3efafdfb345a6eab5ab);
 }
 
