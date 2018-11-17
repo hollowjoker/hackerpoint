@@ -1,0 +1,28 @@
+.header {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px 0;
+  &__logo-wrapper {
+    font-size: rem(18);
+    h4 {
+      color: $primary;
+      margin: 0;
+    }
+  }
+  &__nav-wrapper {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        width: calc(100% / 6);
+        text-align: right;
+        a {
+          color: $primary;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
