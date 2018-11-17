@@ -1,6 +1,25 @@
+.mw-800 {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.mb-30px {
+  margin-bottom: rem(30);
+}
+
 .mr-5px {
   margin-right: rem(5);
 }
+
+.mr-10px {
+  margin-right: rem(10);
+}
+
+.mt-60px {
+  margin-top: rem(60);
+}
+
 
 .shadowed {
   -webkit-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
@@ -66,5 +85,43 @@
   }
   &:hover i {
     color: $light;
+  }
+}
+
+.form-group {
+  input, textarea {
+    border: 1px solid $muted;
+    border-radius: 8px;
+    display: block;
+    font-weight: 300;
+    outline: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+
+}
+
+.btn--link {
+  background-color: transparent;
+  border: 1px solid $muted;
+  border-radius: rem(30);
+  color: $primaryText;
+  display: block;
+  font-size: rem(18);
+  font-weight: 400;
+  padding: 10px;
+  transition: all 0.2s ease-in;
+  text-align: center;
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
   }
 }

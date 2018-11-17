@@ -1,6 +1,6 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import '~font-awesome/css/font-awesome.min.css';
 
 // Variables
 @import 'mixins';
@@ -20,11 +20,17 @@ html,body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+// Global
 @import './vendoroverrides';
+@import './hmpanel';
+@import './overlay';
+@import './panel';
 
 // Admin
 @import './admin/template/sidebar-template';
 @import './admin/components/pageheader';
+@import './admin/page-seller-login';
+@import './admin/page-seller-signup';
 
 // Front 
 @import './front/header';

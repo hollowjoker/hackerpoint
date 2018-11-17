@@ -3,11 +3,9 @@ import $ from 'jquery'
 import Admin from './admin/Admin'
 import Front from './front/Front'
 
-const URL = window.location.origin
-const ADMIN = new Admin(URL)
+const ADMIN = new Admin()
 const FRONT = new Front()
 
-console.log(URL)
 
 $(document).ready(() => {
   if ($('body').hasClass('admin')) {
@@ -15,4 +13,12 @@ $(document).ready(() => {
   } else {
     FRONT.ready()
   }
+})
+
+$(window).on('scroll', e => {
+  // if ($('body').hasClass('admin')) {
+  //   ADMIN.scroll(e)
+  // } else {
+  //   FRONT.scroll(e)
+  // }
 })

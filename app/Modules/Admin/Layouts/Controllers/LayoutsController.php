@@ -12,4 +12,18 @@ class LayoutsController extends Controller
     {
         return view($this::$view_path . 'index');
     }
+
+    public function seller_login()
+    {
+        return view($this::$view_path . 'seller-login');
+    }
+
+    public function seller_signup()
+    {
+        return view($this::$view_path . 'seller-signup');
+    }
+    public function insights()
+    {
+        return view($this::$view_path . 'insights');
+    }
 }

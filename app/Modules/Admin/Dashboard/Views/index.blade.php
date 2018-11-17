@@ -11,7 +11,7 @@
                     <li><a href="#">Detailed</a></li>
                 </ul>
             </div>
-        <table id="dtDashboard" class="table table-hover table-striped" data-location="{{ route('dashboard.get.analytics') }}">
+            <table id="dtDashboard" class="table table-hover table-striped" data-location="{{ route('dashboard.get.analytics') }}">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -46,6 +46,34 @@
                     </tr>
                 </tbody>--}}
             </table>
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="panel">
+                        <header class="panel__head">
+                            Panel Title
+                        </header>
+                        <main class="panel__body">
+                            <canvas id="insights-top-products" width="800" height="450"></canvas>
+                        </main>
+                        <footer class="panel__footer">
+                            Footer
+                        </footer>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="panel">
+                        <header class="panel__head">
+                            Panel Title
+                        </header>
+                        <main class="panel__body">
+                            <canvas id="insights-revenue" width="800" height="450"></canvas>
+                        </main>
+                        <footer class="panel__footer">
+                            Footer
+                        </footer>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 @stop

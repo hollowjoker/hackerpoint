@@ -1,5 +1,6 @@
+// Bootstrap - Buttons
 .btn {
-
+    margin: 2px 0;
     .material-icons {
         font-size: 1.5em;
         margin: 0 8px 0 0px;
@@ -7,6 +8,32 @@
     }
 }
 
+// Bootstrap - Container
+.app--template-sidebar .container-fluid {
+    padding: 0 30px;
+}
+
+// Datatables - Tables
+.dataTables_wrapper {
+    .dataTables_length {
+        select {
+            appearance: none;
+            border: 1px solid #dee2e4;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+    .dataTables_filter {
+        input {
+            appearance: none;
+            border: 1px solid #dee2e4;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}
+
+// Datatables 
 .table-striped tbody tr:nth-of-type(odd),
 .table-hover tbody tr:hover {
     background-color: rgb(240, 240, 249);
