@@ -4,9 +4,11 @@
     <section id="home" class="section current-section section-home d-flex align-items-center">
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            <h2><span class="txt-strong">HOME</span><span class="txt-light">Ipsum</span></h2>
-            <h4>Sed ut ultrices purus, sed gravida quam. Vestibulum ornare sed metus eget pharetra. Integer sagittis ligula scelerisque, luctus arcu eget, consectetur turpis.</h4>
+          <div class="col-md-12 col-lg-6">
+            <div class="home--welcome">
+              <h2><span class="txt-strong">HOME</span><span class="txt-light">Ipsum</span></h2>
+              <h4>Sed ut ultrices purus, sed gravida quam. Vestibulum ornare sed metus eget pharetra. Integer sagittis ligula scelerisque, luctus arcu eget, consectetur turpis.</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -323,7 +325,7 @@
               <a href="/"><i class="fa-instagram fa mr-10px"></i></a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 mt-md-30">
             <h5>SAY HELLO</h5>
             <form action="">
               <div class="form-group">

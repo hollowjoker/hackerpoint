@@ -17,7 +17,7 @@
     @media (max-width: 991px) {
       box-shadow: none;
       min-height: 0;
-      padding: 60px;
+      padding: 60px 0;
       position: relative;
     }
     &.current-section {
@@ -28,10 +28,19 @@
       @media(max-width: 991px) {
         min-height: 100vh;
       }
+      .home--welcome {
+        @media(max-width: 991px) {
+          background-color: rgba(255, 255, 255 , 0.8);
+          padding: 15px;
+        }
+      }
     }
     h2 {
       color: $primaryText;
       font-size: rem(48);
+      @media(max-width: 576px) {
+        font-size: rem(36);
+      }
     }
     h4,p {
       font-weight: 300;
@@ -45,23 +54,31 @@
       // position: relative;
       &__grid {
         margin: 0 auto;
-        @media(max-width: 767px) {
+        @media(max-width: 991px) {
           width: 2000px;
+        }
+        @media(max-width: 767px) {
+          width: 1000px;
         }
         &-item {
           overflow: hidden;
           width: 20%;
-          @media(max-width: 767px) {
-            // height: 400px;
+          @media(max-width: 991px) {
             width: 100%;
+          }
+          @media(max-width: 767px) {
+            width: 200px;
           }
           img {
             display: block;
             height: 200px;
             object-fit: cover;
-            @media(max-width: 767px) {
+            @media(max-width: 991px) {
               height: 400px;
               // width: 100%;
+            }
+            @media(max-width: 767px) {
+              height: 200px;
             }
           }
           &-info {

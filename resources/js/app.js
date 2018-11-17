@@ -22,3 +22,11 @@ $(window).on('scroll', e => {
   //   FRONT.scroll(e)
   // }
 })
+
+$(window).on('load', e => {
+  if ($('body').hasClass('admin')) {
+    ADMIN.ready()
+  } else {
+    FRONT.load(e)
+  }
+})

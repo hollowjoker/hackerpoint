@@ -1,9 +1,6 @@
 import $ from 'jquery'
 import _ from 'lodash'
 import { TweenMax, Expo } from 'gsap/TweenMax'
-// import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
-// import slick from 'slick-carousel'
 
 export default class Front {
 
@@ -20,6 +17,13 @@ export default class Front {
       this.setHomeSections(this.homeSections)
       this.bindScroll()
       this.navigateHome(this.homeNavItem)
+    } else {
+      $('.menu-toggle').click(e => {
+        $('.menu-toggle, .header').toggleClass('opened')
+      })
+
+      this.navigateHomeMobile(this.homeNavItem)
+
     }
   }
 
@@ -36,6 +40,10 @@ export default class Front {
   resize (e) {
   }
 
+  load (e) {
+    $('.page-loader-wrapper').fadeOut()
+  }
+
   convertToArray (htmlEntity) {
     return Array.from(htmlEntity)
   }
@@ -46,6 +54,22 @@ export default class Front {
       if (i !== 0) {
         tm.set(e, { top: '-' + $(window).height() })
       }
+    })
+  }
+
+  navigateHomeMobile (listItem) {
+    listItem.click(e => {
+      let _target = $(e.target)
+      let sectionRef = _target.data('name')
+      let section = $('.section-' + sectionRef)
+
+      listItem.removeClass('active')
+      _target.addClass('active')
+      console.log(section);
+
+      $('html, body').animate({
+        scrollTop: section.offset().top
+      }, 800)
     })
   }
 
@@ -103,7 +127,7 @@ export default class Front {
   }
 
   animateHomeSections (section, offsetTop) {
-    TweenMax.to(section, 0.4, { ease: Expo.easeInOut, top: offsetTop })
+    TweenMax.to(section, 0.5, { ease: Expo.easeInOut, top: offsetTop, force3D: true })
 
   }
 }
