@@ -1,7 +1,11 @@
+.mr-5px {
+  margin-right: rem(5);
+}
+
 .shadowed {
-  -webkit-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.75);
-  -moz-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.75);
-  box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
+  box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
 }
 
 .txt-strong {
@@ -10,4 +14,57 @@
 
 .txt-light {
   font-weight: 300;
+}
+
+.ov-x-scroll {
+  overflow-x: auto
+}
+
+.btn--custom {
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #e1e1e1;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0;
+  position: relative;
+  i {
+    color: $primaryText;
+    margin: 0 10px;
+    transition: color 0.2s ease-in;
+    vertical-align: middle;
+  }
+  &:hover i {
+    color: $primary;
+  }
+}
+
+
+.btn--custom2 {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  border-right: 1px solid #e1e1e1;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s ease-in;
+  width: 40px;
+  i {
+    color: $primaryText;
+    margin: 0;
+    transition: color 0.2s ease-in;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: $primary;
+  }
+  &:hover i {
+    color: $light;
+  }
 }

@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
   &__logo-wrapper {
     font-size: rem(18);
     h4 {
@@ -43,37 +44,18 @@
   }
   &__controls-wrapper {
     .header-control {
-      .btn--custom {
-        background-color: transparent;
-        border: none;
-        border-right: 1px solid #e1e1e1;
-        cursor: pointer;
-        display: inline-block;
-        outline: none;
-        padding: 0;
-        position: relative;
-        &:hover i {
-          color: $primary;
-        }
-        &.btn-cart {
-          .btn-cart--count {
-            background-color: $primary;
-            border-radius: 50%;
-            color: $light;
-            font-size: rem(12);
-            font-weight: 500;
-            height: 20px;
-            position: absolute;
-            right: 0;
-            top: -10px;
-            width: 20px;
-          }
-        }
-        i {
-          color: $primaryText;
-          margin: 0 10px;
-          transition: color 0.2s ease-in;
-          vertical-align: middle;
+      .btn-cart {
+        .btn-cart--count {
+          background-color: $primary;
+          border-radius: 50%;
+          color: $light;
+          font-size: rem(12);
+          font-weight: 500;
+          height: 20px;
+          position: absolute;
+          right: 0;
+          top: -10px;
+          width: 20px;
         }
       }
     }
