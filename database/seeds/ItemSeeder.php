@@ -28,11 +28,14 @@ class ItemSeeder extends Seeder
             if($key != 0 && $arr != false) {
 
                 $admin = new Item();
-                $admin->item_category_id = $arr[0];
-                $admin->item_name = $arr[1];
-                $admin->price = $arr[2];
-                $admin->description = $arr[3];
-                $admin->type = $arr[4];
+                $admin->store_id = $arr[0];
+                $admin->user_id = $arr[1];
+                $admin->item_category_id = $arr[2];
+                $admin->item_name = $arr[3];
+                $admin->price = $arr[4];
+                $admin->qty = $arr[5];
+                $admin->description = $arr[6];
+                $admin->type = $arr[7];
 
                 $admin->save();
             }
