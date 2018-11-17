@@ -15,7 +15,7 @@
     </head>
     <body>
         @include('layout.front.header')
-        {{-- @yield('content') --}}
+        @yield('content')
     </body>
 
     <script src="{!! asset('js/app.js') !!}"></script>
