@@ -10481,10 +10481,12 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('scroll', function (e)
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_datatables__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_datatables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_datatables__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_datatables__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_datatables___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_datatables__);
+throw new Error("Cannot find module \"sweetalert2\"");
+throw new Error("Cannot find module \"chart.js\"");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10492,18 +10494,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 
-var Admin = function () {
-  function Admin(url) {
-    _classCallCheck(this, Admin);
 
-    this.url = url;
+
+var Admin = function () {
+  function Admin() {
+    _classCallCheck(this, Admin);
   }
 
   _createClass(Admin, [{
     key: 'ready',
     value: function ready() {
-      console.log('admin');
       this.initDataTable();
+      this.initInsights();
     }
   }, {
     key: 'scroll',
@@ -10514,7 +10516,45 @@ var Admin = function () {
   }, {
     key: 'initDataTable',
     value: function initDataTable() {
-      __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#tae').dataTable();
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#tae').dataTable();
+    }
+  }, {
+    key: 'initSwal',
+    value: function initSwal() {
+      __WEBPACK_IMPORTED_MODULE_2_sweetalert2___default()('asd');
+    }
+  }, {
+    key: 'initInsights',
+    value: function initInsights() {
+      // Top Products
+      new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById('insights-top-products'), {
+        type: 'bar',
+        data: {
+          labels: ['Product 1', 'Product 2', 'Product 3', 'Product 4', 'Product 5'],
+          datasets: [{
+            label: 'Clicks and Views',
+            backgroundColor: ['#3e95cd', '#8e5ea2', '#3cba9f', '#e8c3b9', '#c45850'],
+            data: [32, 40, 10, 12, 23]
+          }]
+        },
+        options: {
+          legend: { display: false }
+        }
+      });
+
+      // Revenue
+      new __WEBPACK_IMPORTED_MODULE_3_chart_js___default.a(document.getElementById("insights-revenue"), {
+        type: 'line',
+        data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+          datasets: [{
+            data: [32000, 16000, 64000, 61000, 32000, 16000, 32000, 16000, 64000, 61000, 32000, 16000],
+            label: "Revenue",
+            borderColor: "#3e95cd",
+            fill: true
+          }]
+        }
+      });
     }
   }]);
 

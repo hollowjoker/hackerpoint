@@ -11065,15 +11065,88 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.btn {
+  margin: 2px 0;
+}
+
 .btn .material-icons {
   font-size: 1.5em;
   margin: 0 8px 0 0px;
   vertical-align: middle;
 }
 
+.app--template-sidebar .container-fluid {
+  padding: 0 30px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #dee2e4;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #dee2e4;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .table-striped tbody tr:nth-of-type(odd),
 .table-hover tbody tr:hover {
   background-color: #f0f0f9;
+}
+
+.hm-panel {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+}
+
+.overlay::before {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+}
+
+.overlay--primary::before {
+  background-color: rgba(0, 0, 0, 0.76);
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+}
+
+.panel__head {
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 15px 20px;
+}
+
+.panel__body {
+  padding: 30px 20px;
+}
+
+.panel__footer {
+  padding: 15px 20px;
 }
 
 /**
@@ -11090,7 +11163,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px 15px;
+  padding: 0 15px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11116,6 +11189,10 @@ body {
   padding: 0;
 }
 
+.app--template-sidebar .app-header__profile {
+  position: relative;
+}
+
 .app--template-sidebar .app-header__profile-photo {
   margin-right: 8px;
   max-width: 100%;
@@ -11123,12 +11200,53 @@ body {
 }
 
 .app--template-sidebar .app-header__profile-name {
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px 0;
   text-decoration: none;
+}
+
+.app--template-sidebar .app-header__profile-name:hover {
+  color: #684AEE;
 }
 
 .app--template-sidebar .app-header__profile-name .material-icons {
   margin-top: -4px;
   vertical-align: middle;
+}
+
+.app--template-sidebar .app-header__profile-name-dropdown {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  width: 175px;
+}
+
+.app--template-sidebar .app-header__profile-name-dropdown li {
+  display: block;
+}
+
+.app--template-sidebar .app-header__profile-name-dropdown li a {
+  color: #000;
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+
+.app--template-sidebar .app-header__profile-name-dropdown li a:hover {
+  background-color: #f0f0f9;
+  color: #6750f2;
+}
+
+.app--template-sidebar .app-header__profile-name:hover .app-header__profile-name-dropdown {
+  display: block;
 }
 
 .app--template-sidebar .app-sidebar {
@@ -11242,6 +11360,18 @@ body {
 
 .page-header__crumbs > li:last-child::after {
   content: '';
+}
+
+.page-seller-login {
+  background-size: cover;
+  padding: 60px 0;
+  position: relative;
+}
+
+.page-seller-signup {
+  background-size: cover;
+  padding: 60px 0;
+  position: relative;
 }
 
 .header {
