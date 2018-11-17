@@ -25,18 +25,35 @@
       width: 100%;
       li {
         margin-right: 30px;
+        position: relative;
         text-align: center;
+        
         &:last-child {
           margin-right: 0;
         }
-        a {
+        span {
           color: $primaryText;
+          cursor: pointer;
           font-weight: 700;
+          position: relative;
           text-transform: uppercase;
           transition: color 0.2s ease-in;
           &:hover {
             color: $primary;
             text-decoration: none;
+          }
+          &.active {
+            color: $primary;
+            &::after {
+              background-color: $primary;
+              bottom: -5px;
+              content: '';
+              left: 0;
+              height: 1px;
+              position: absolute;
+              right: 0;
+              width: 100%;
+            }
           }
         }
       }

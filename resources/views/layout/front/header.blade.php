@@ -9,11 +9,11 @@
       <div class="col-4">
         <nav class="header__nav-wrapper">
           <ul class="d-flex align-items-center justify-content-around">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#shop">Products</a></li>
-            <li><a href="#shop">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class=" "><span class="js-nav-item active" data-section="0">Home</span></li>
+            <li class=""><span class="js-nav-item" data-section="1">About</span></li>
+            <li class=""><span class="js-nav-item" data-section="2">Products</span></li>
+            <li class=""><span class="js-nav-item" data-section="3">Services</span></li>
+            <li class=""><span class="js-nav-item" data-section="4">Contact</span></li>
           </ul>
         </nav>
       </div>

@@ -16,6 +16,10 @@
   margin-right: rem(10);
 }
 
+.mt-30px {
+  margin-top: rem(30);
+}
+
 .mt-60px {
   margin-top: rem(60);
 }
@@ -113,10 +117,10 @@
   border: 1px solid $muted;
   border-radius: rem(30);
   color: $primaryText;
-  display: block;
+  display: inline-block;
   font-size: rem(18);
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 15px;
   transition: all 0.2s ease-in;
   text-align: center;
   &:hover {

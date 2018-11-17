@@ -458,6 +458,10 @@ table.dataTable td {
   margin-right: 0.71428571rem;
 }
 
+.mt-30px {
+  margin-top: 2.14285714rem;
+}
+
 .mt-60px {
   margin-top: 4.28571429rem;
 }
@@ -562,10 +566,10 @@ table.dataTable td {
   border: 1px solid #e1e1e1;
   border-radius: 2.14285714rem;
   color: #333;
-  display: block;
+  display: inline-block;
   font-size: 1.28571429rem;
   font-weight: 400;
-  padding: 10px;
+  padding: 10px 15px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   text-align: center;
@@ -11268,6 +11272,7 @@ body {
 
 .header__nav-wrapper ul li {
   margin-right: 30px;
+  position: relative;
   text-align: center;
 }
 
@@ -11275,17 +11280,34 @@ body {
   margin-right: 0;
 }
 
-.header__nav-wrapper ul li a {
+.header__nav-wrapper ul li span {
   color: #333;
+  cursor: pointer;
   font-weight: 700;
+  position: relative;
   text-transform: uppercase;
   -webkit-transition: color 0.2s ease-in;
   transition: color 0.2s ease-in;
 }
 
-.header__nav-wrapper ul li a:hover {
+.header__nav-wrapper ul li span:hover {
   color: #684AEE;
   text-decoration: none;
+}
+
+.header__nav-wrapper ul li span.active {
+  color: #684AEE;
+}
+
+.header__nav-wrapper ul li span.active::after {
+  background-color: #684AEE;
+  bottom: -5px;
+  content: '';
+  left: 0;
+  height: 1px;
+  position: absolute;
+  right: 0;
+  width: 100%;
 }
 
 .header__controls-wrapper .header-control .btn-cart .btn-cart--count {
@@ -11346,19 +11368,19 @@ body {
 
 .main .section-shop__grid {
   margin: 0 auto;
-  width: 2000px;
 }
 
 .main .section-shop__grid-item {
   overflow: hidden;
+  width: 20%;
 }
 
 .main .section-shop__grid-item img {
   display: block;
-  height: 400px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 400px;
+  width: 100%;
 }
 
 .main .section-shop__grid-item-info {
@@ -11391,12 +11413,12 @@ body {
 }
 
 .main .section-shop__grid-item-price p {
-  font-size: 1.28571429rem;
+  font-size: 1.14285714rem;
   font-weight: 600;
 }
 
 .main .section-shop__grid-item-price p span {
-  font-size: 1.14285714rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 400;
   text-decoration: line-through;

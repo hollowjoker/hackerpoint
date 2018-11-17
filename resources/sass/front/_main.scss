@@ -37,14 +37,14 @@
       // position: relative;
       &__grid {
         margin: 0 auto;
-        width: 2000px;
         &-item {
           overflow: hidden;
+          width: 20%;
           img {
             display: block;
-            height: 400px;
+            height: 200px;
             object-fit: cover;
-            width: 400px;
+            width: 100%;
           }
           &-info {
             background-color: rgba(255,255,255,0.8);
@@ -73,10 +73,10 @@
           &-price {
             p {
               // color: $primary;
-              font-size: rem(18);
+              font-size: rem(16);
               font-weight: 600;
               span {
-                font-size: rem(16);
+                font-size: rem(14);
                 font-style: italic;
                 font-weight: 400;
                 text-decoration: line-through;
