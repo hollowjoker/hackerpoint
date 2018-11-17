@@ -38,6 +38,7 @@ return array(
     'App\\Models\\User_Bank' => $baseDir . '/app/Models/User_Bank.php',
     'App\\Models\\User_Info' => $baseDir . '/app/Models/User_Info.php',
     'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => $baseDir . '/app/Modules/Admin/Dashboard/Controllers/DashboardController.php',
+    'App\\Modules\\Admin\\Insights\\Controllers\\InsightsController' => $baseDir . '/app/Modules/Admin/Insights/Controllers/InsightsController.php',
     'App\\Modules\\Admin\\Layouts\\Controllers\\LayoutsController' => $baseDir . '/app/Modules/Admin/Layouts/Controllers/LayoutsController.php',
     'App\\Modules\\Admin\\Login\\Controllers\\LoginController' => $baseDir . '/app/Modules/Admin/Login/Controllers/LoginController.php',
     'App\\Modules\\Front\\Home\\Controllers\\HomeController' => $baseDir . '/app/Modules/Front/Home/Controllers/HomeController.php',
