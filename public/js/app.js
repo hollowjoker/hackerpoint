@@ -34202,6 +34202,7 @@ var Admin = function () {
       this.initDataTable();
       this.initLogin();
       this.initInsights();
+      this.initCreateItem();
       this.initAppHeaderMenuToggle();
     }
   }, {
@@ -34323,6 +34324,32 @@ var Admin = function () {
             }
           });
         }
+      });
+    }
+  }, {
+    key: 'initCreateItem',
+    value: function initCreateItem() {
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#form-add-item').submit(function () {
+        var formAction = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).attr('action');
+        var formData = new FormData(this);
+        var relocation = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).attr('data-relocation');
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
+          url: formAction,
+          data: formData,
+          type: "POST",
+          contentType: false,
+          cache: false,
+          processData: false
+        }).done(function (returnData) {
+          console.log(returnData);
+          // if(returnData.type == 'success'){
+          //   window.location.href = relocation;
+          // }
+          // else{
+          //   alert(returnData.message);
+          // }
+        });
+        return false;
       });
     }
   }]);

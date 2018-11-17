@@ -13,6 +13,7 @@ export default class Admin {
     this.initDataTable();
     this.initLogin();
     this.initInsights();
+    this.initCreateItem();
     this.initAppHeaderMenuToggle();
   }
 
@@ -138,5 +139,30 @@ export default class Admin {
       }
     });
 
+  }
+
+  initCreateItem() {
+    $('#form-add-item').submit(function(){
+      var formAction = $(this).attr('action');
+      var formData = new FormData(this);
+      var relocation = $(this).attr('data-relocation');
+      $.ajax({
+        url : formAction,
+        data : formData,
+        type: "POST",
+        contentType: false,
+        cache: false,
+        processData:false,
+      }).done(function(returnData){
+        console.log(returnData);
+        // if(returnData.type == 'success'){
+        //   window.location.href = relocation;
+        // }
+        // else{
+        //   alert(returnData.message);
+        // }
+      });
+      return false;
+    });
   }
 }

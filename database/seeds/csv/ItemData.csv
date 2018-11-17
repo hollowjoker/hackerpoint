@@ -1,5 +1,4 @@
 
-1,mouse,200,mega mouse,product
-1,pc cleaning,100,pc mega clean,services
-2,White Polo shirt,500,malupit na shirt,product
-2,Tahian,1000,malupit na tahian,services
+1,1,1,product 1,200,10,mega mouse,product
+1,1,2,product 2,100,20,pc mega clean,product
+1,1,1,service 2,100,20,pc mega clean,product
