@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);@charset "UTF-8";
 
+.mw-800 {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
 .mr-5px {
   margin-right: 0.35714286rem;
 }
@@ -10803,9 +10809,9 @@ body {
   background-image: url(/images/home.jpg?e610731e3290f3efafdfb345a6eab5ab);
 }
 
-.main .section h1 {
+.main .section h2 {
   color: #333;
-  font-size: 4rem;
+  font-size: 3.42857143rem;
 }
 
 .main .section h4,
@@ -10841,20 +10847,24 @@ body {
 }
 
 .main .section-shop__grid-item-info {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   left: 0;
+  opacity: 0;
   padding: 10px;
   position: absolute;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
   top: 0;
   width: 100%;
 }
 
-.main .section-shop__grid-item-info h5 {
+.main .section-shop__grid-item-info h5 a {
+  color: #333;
   text-align: center;
   width: 100%;
 }
@@ -10863,5 +10873,17 @@ body {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.main .section-shop__grid-item-price p {
+  font-size: 1.28571429rem;
+  font-weight: 600;
+}
+
+.main .section-shop__grid-item-price p span {
+  font-size: 1.14285714rem;
+  font-style: italic;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 

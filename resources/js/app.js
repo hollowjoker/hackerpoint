@@ -8,8 +8,7 @@ $(document).ready(() => {
     const admin = new Admin()
     admin.init()
   } else {
-    let masonryItems = document.querySelector('.section-shop__grid')
-    const front = new Front(masonryItems)
+    const front = new Front()
     front.init()
   }
 })

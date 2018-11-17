@@ -1,21 +1,25 @@
-import Masonry from 'masonry-layout'
+import $ from 'jquery'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
+// import slick from 'slick-carousel'
 
 export default class Front {
-  constructor (masonry) {
-    this.masonry = masonry
+
+  constructor (reviews) {
+    this.reviews = reviews
   }
 
   init () {
-    this.initMasonry()
+    this.initReviews()
   }
 
-  initMasonry () {
-    // let grid = new Masonry(this.masonry, {
-    //   itemSelector: '.section-shop__grid-item',
-    //   columnWidth: 300,
-    //   horizontalOrder: false,
-    //   containerStyle: null,
-    //   // gutter: 30
+  initReviews () {
+    // this.reviews.slick({
+    //   autoplay: true,
+    //   autoplaySpeed: 5000,
+    //   arrows: false,
+    //   dots: true,
+
     // })
   }
 }

@@ -9,9 +9,9 @@
     &-home {
       background-image: url('../../img/home.jpg');
     }
-    h1 {
+    h2 {
       color: $primaryText;
-      font-size: rem(56);
+      font-size: rem(48);
     }
     h4,p {
       font-weight: 300;
@@ -35,25 +35,41 @@
             width: 400px;
           }
           &-info {
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255,255,255,0.8);
             height: 100%;
             flex-wrap: wrap;
             left: 0;
-            // opacity: 0;
+            opacity: 0;
             padding: 10px;
             position: absolute;
-            // transform: scale(0.9);
+            transform: scale(0.9);
             transition: all 0.3s ease-out;
             top: 0;
             width: 100%;
             h5 {
-              text-align: center;
-              width: 100%;
+              a {
+                color: $primaryText;
+                text-align: center;
+                width: 100%;
+              }
             }
           }
           &:hover .section-shop__grid-item-info {
             opacity: 1;
             transform: scale(1);
+          }
+          &-price {
+            p {
+              // color: $primary;
+              font-size: rem(18);
+              font-weight: 600;
+              span {
+                font-size: rem(16);
+                font-style: italic;
+                font-weight: 400;
+                text-decoration: line-through;
+              }
+            }
           }
         }
       }
