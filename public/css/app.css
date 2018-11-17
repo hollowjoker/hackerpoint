@@ -470,6 +470,10 @@ table.dataTable td {
   border: none !important;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .shadowed {
   -webkit-box-shadow: 11px 11px 19px -3px rgba(0, 0, 0, 0.5);
   box-shadow: 11px 11px 19px -3px rgba(0, 0, 0, 0.5);
@@ -481,6 +485,10 @@ table.dataTable td {
 
 .txt-light {
   font-weight: 300;
+}
+
+.txt-err {
+  color: #B12D24;
 }
 
 .ov-x-scroll {
@@ -12094,11 +12102,13 @@ body .swal2-container .swal2-popup {
   margin-bottom: 30px;
 }
 
-.main.cart {
+.main.cart,
+.main.checkout {
   padding-top: 75px;
 }
 
-.main.cart .section {
+.main.cart .section,
+.main.checkout .section {
   background-color: #fff;
   background-position: right;
   background-repeat: no-repeat;

@@ -1,6 +1,7 @@
 @extends('layout.front.master')
 @section('content')
 <div class="main checkout">
+  checkout
   <section id="contact" class="section section-contact d-flex align-items-center">
     <div class="container">
       <div class="row">
@@ -47,3 +48,4 @@
     </div>
   </section>
 </div>
+@stop

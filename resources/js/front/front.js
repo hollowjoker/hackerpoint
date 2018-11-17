@@ -44,6 +44,7 @@ export default class Front {
 
   load (e) {
     $('.page-loader-wrapper').fadeOut()
+    $('body').removeClass('no-scroll')
   }
 
   convertToArray (htmlEntity) {
