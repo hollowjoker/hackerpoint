@@ -12,5 +12,10 @@ Route::group(['prefix' => '/cart', 'namespace' => '\App\Modules\Front\Cart\Contr
 	// echo 1;
 });
 
+Route::group(['prefix' => '/checkout', 'namespace' => '\App\Modules\Front\Checkout\Controllers', 'middleware' => ['web']], function(){
+	Route::get('/', 'CheckoutController@index')->name('checkout.index');
+	// echo 1;
+});
+
 
 

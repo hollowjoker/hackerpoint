@@ -83,7 +83,7 @@
       </div>
       <div class="row mt-30px justify-content-end">
         <div class="col-md-12 col-lg-6">
-          <button class="btn--primary-bordered">Proceed to Checkout</button>
+          <a href="/checkout" class="btn--primary-bordered">Proceed to Checkout</button>
         </div>
       </div>
     </div>
