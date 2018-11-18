@@ -146,6 +146,6 @@ export default class Front {
   }
 
   animateHomeSections (section, offsetTop) {
-    TweenMax.to(section, 0.55, { ease: Expo.easeInOut, top: offsetTop, force3D: true })
+    TweenMax.to(section, 0.5, { ease: Expo.easeOut, top: offsetTop, force3D: true })
   }
 }

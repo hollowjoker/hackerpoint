@@ -116,7 +116,7 @@
         <div class="col-md-6">
           <div class="section-contact__info-wrapper mb-30">
             <h5>CONTACT INFORMATION</h5>
-            <div class="section-contact__info d-flex align-items-center"><i class="material-icons mr-10px">email</i><span>hackdog@hello.ph</span></div>
+            <div class="section-contact__info d-flex align-items-center"><i class="material-icons mr-10px">email</i><span>eatify@hello.ph</span></div>
             <div class="section-contact__info d-flex align-items-center"><i class="material-icons mr-10px">phone</i><span>+63 912 623 7886</span></div>
             <div class="section-contact__info d-flex align-items-center"><i class="material-icons mr-10px">place</i><span>903 Meadow Ln, Russellville, KY, 42276</span></div>
           </div>
@@ -144,7 +144,7 @@
       </div>
       <div class="row mt-60px copyright">
         <div class="col-12">
-          <p>&copy; 2018 HACKDog</p>
+          <p>&copy; 2018 Eatify</p>
         </div>
       </div>
     </div>

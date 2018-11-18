@@ -63015,7 +63015,7 @@ var Front = function () {
   }, {
     key: 'animateHomeSections',
     value: function animateHomeSections(section, offsetTop) {
-      __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["b" /* TweenMax */].to(section, 0.55, { ease: __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["a" /* Expo */].easeInOut, top: offsetTop, force3D: true });
+      __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["b" /* TweenMax */].to(section, 0.5, { ease: __WEBPACK_IMPORTED_MODULE_2_gsap_TweenMax__["a" /* Expo */].easeOut, top: offsetTop, force3D: true });
     }
   }]);
 

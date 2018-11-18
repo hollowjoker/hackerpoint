@@ -3,7 +3,7 @@
     <div class="row align-items-center justify-content-between">
       <div class="col-lg-4 col-md-12">
         <div class="header__logo-wrapper">
-          <h4><a href="/"><span class="txt-strong">HACKDOG</span><span class="txt-light">Manila</span></a></h4>
+          <h4><a href="/"><span class="txt-strong">Eatify</span><span class="txt-light">Manila</span></a></h4>
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
