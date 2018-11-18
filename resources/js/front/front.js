@@ -13,6 +13,7 @@ export default class Front {
   }
 
   ready () {
+    this.navigateHomeMobile(this.homeNavItem)
     if ($(window).width() >= 992) {
       if ($('.main.home').length) {
         this.setHomeSections(this.homeSections)
@@ -23,9 +24,6 @@ export default class Front {
       $('.menu-toggle').click(e => {
         $('.menu-toggle, .header').toggleClass('opened')
       })
-
-      this.navigateHomeMobile(this.homeNavItem)
-
     }
   }
 
