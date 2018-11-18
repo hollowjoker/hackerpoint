@@ -62874,6 +62874,7 @@ var Front = function () {
     key: 'ready',
     value: function ready() {
       this.navigateHomeMobile(this.homeNavItem);
+      this.openModalView();
       if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).width() >= 992) {
         if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main.home').length) {
           this.setHomeSections(this.homeSections);
@@ -62908,6 +62909,25 @@ var Front = function () {
     key: 'convertToArray',
     value: function convertToArray(htmlEntity) {
       return Array.from(htmlEntity);
+    }
+  }, {
+    key: 'openModalView',
+    value: function openModalView() {
+      var modal = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.shop-item__modal');
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.open-modal-view').click(function (e) {
+        modal.show();
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').addClass('no-scroll');
+        setTimeout(function () {
+          modal.addClass('shown');
+        }, 350);
+      });
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.shop-item__modal .close-btn').click(function (e) {
+        modal.removeClass('shown');
+        __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').removeClass('no-scroll');
+        setTimeout(function () {
+          modal.hide();
+        }, 350);
+      });
     }
   }, {
     key: 'setHomeSections',

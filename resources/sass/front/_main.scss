@@ -201,4 +201,63 @@
       width: 25%;
     }
   }
+  .pagination--wrapper {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin-right: rem(8);
+    }
+  }
+  .shop-item__modal {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    display: none;
+    left: 50%;
+    opacity: 0;
+    padding: 40px 25px 20px;
+    position: fixed;
+    top: 29%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    width: 50%;
+    z-index: 999;
+    &.shown {
+      opacity: 1;
+      top: 33%;
+    }
+    .close-btn {
+      background-color: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 35px;
+      position: absolute;
+      right: 30px;
+      top: 10px;
+      transition: all 0.3s ease;
+      width: 35px;
+      &:hover {
+        background-color: $primaryText;
+      }
+      &:hover::before, &:hover::after {
+        background-color: $light;
+      }
+      &::before, &::after {
+        background-color: $primaryText;
+        content: '';
+        height: 1px;
+        left: 5px;
+        position: absolute;
+        top: 17px;
+        transition: all 0.3s ease;
+        width: 25px;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      } 
+    }
+  }
 }

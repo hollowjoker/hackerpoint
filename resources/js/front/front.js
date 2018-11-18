@@ -14,6 +14,7 @@ export default class Front {
 
   ready () {
     this.navigateHomeMobile(this.homeNavItem)
+    this.openModalView()
     if ($(window).width() >= 992) {
       if ($('.main.home').length) {
         this.setHomeSections(this.homeSections)
@@ -47,6 +48,25 @@ export default class Front {
 
   convertToArray (htmlEntity) {
     return Array.from(htmlEntity)
+  }
+
+  openModalView () {
+    var modal = $('.shop-item__modal')
+    $('.open-modal-view').click(e => {
+      modal.show()
+      $('body').addClass('no-scroll')
+      setTimeout(() => {
+        modal.addClass('shown')
+
+      }, 350)
+    })
+    $('.shop-item__modal .close-btn').click(e => {
+      modal.removeClass('shown')
+      $('body').removeClass('no-scroll')
+      setTimeout(() => {
+        modal.hide()
+      }, 350)
+    })
   }
 
   setHomeSections (section) {
