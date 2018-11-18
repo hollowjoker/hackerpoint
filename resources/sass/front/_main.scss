@@ -140,7 +140,8 @@
     }
   }
   &.cart,
-  &.checkout {
+  &.checkout,
+  &.shop {
     padding-top: 75px;
     .section {
       background-color: $light;
@@ -193,6 +194,11 @@
     max-width: 70%;
     @media(max-width: 767px) {
       max-width: 100%;
+    }
+  }
+  .section-shop-wrapper {
+    .section-shop__grid-item {
+      width: 25%;
     }
   }
 }

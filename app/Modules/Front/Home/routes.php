@@ -17,5 +17,10 @@ Route::group(['prefix' => '/checkout', 'namespace' => '\App\Modules\Front\Checko
 	// echo 1;
 });
 
+Route::group(['prefix' => '/shop', 'namespace' => '\App\Modules\Front\Shop\Controllers', 'middleware' => ['web']], function(){
+	Route::get('/', 'ShopController@index')->name('shop.index');
+	// echo 1;
+});
+
 
 

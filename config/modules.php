@@ -14,6 +14,7 @@ return [
             'Cart',
             'Checkout',
             'Dashboard',
+            'Shop'
         ],
     ],
 ];

@@ -458,6 +458,10 @@ table.dataTable td {
   margin-right: 0.71428571rem;
 }
 
+.mr-30px {
+  margin-right: 2.14285714rem;
+}
+
 .mt-30px {
   margin-top: 2.14285714rem;
 }
@@ -12103,12 +12107,14 @@ body .swal2-container .swal2-popup {
 }
 
 .main.cart,
-.main.checkout {
+.main.checkout,
+.main.shop {
   padding-top: 75px;
 }
 
 .main.cart .section,
-.main.checkout .section {
+.main.checkout .section,
+.main.shop .section {
   background-color: #fff;
   background-position: right;
   background-repeat: no-repeat;
@@ -12164,5 +12170,9 @@ body .swal2-container .swal2-popup {
   .main .order-summary-item {
     max-width: 100%;
   }
+}
+
+.main .section-shop-wrapper .section-shop__grid-item {
+  width: 25%;
 }
 
