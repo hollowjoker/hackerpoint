@@ -11892,6 +11892,7 @@ body .swal2-container .swal2-popup {
 
 .header__nav-wrapper ul li span.active {
   color: #684AEE;
+  pointer-events: none;
 }
 
 .header__nav-wrapper ul li span.active::after {

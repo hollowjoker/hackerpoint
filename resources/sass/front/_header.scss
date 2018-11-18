@@ -206,6 +206,7 @@
           }
           &.active {
             color: $primary;
+            pointer-events: none;
             &::after {
               background-color: $primary;
               bottom: -5px;
