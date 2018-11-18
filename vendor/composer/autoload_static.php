@@ -446,11 +446,7 @@ class ComposerStaticInitfe8631dd647d8bdd180c599204197136
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-<<<<<<< HEAD
-        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/dashboard/DashboardController.php',
-=======
         'App\\Http\\Controllers\\Module\\Admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/Module/Admin/DashboardController.php',
->>>>>>> 59a10f3e77b80afd07072e73b27259cf45f94b8c
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -472,7 +468,7 @@ class ComposerStaticInitfe8631dd647d8bdd180c599204197136
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\User_Bank' => __DIR__ . '/../..' . '/app/Models/User_Bank.php',
         'App\\Models\\User_Info' => __DIR__ . '/../..' . '/app/Models/User_Info.php',
-        'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/Admin/Dashboard/Controllers/DashboardController.php',
+        'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Modules/Front/Ecommerce/Controllers/DashboardController.php',
         'App\\Modules\\Admin\\Insights\\Controllers\\InsightsController' => __DIR__ . '/../..' . '/app/Modules/Admin/Insights/Controllers/InsightsController.php',
         'App\\Modules\\Admin\\Layouts\\Controllers\\LayoutsController' => __DIR__ . '/../..' . '/app/Modules/Admin/Layouts/Controllers/LayoutsController.php',
         'App\\Modules\\Admin\\Login\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Modules/Admin/Login/Controllers/LoginController.php',

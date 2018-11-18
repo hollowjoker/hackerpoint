@@ -15,11 +15,7 @@ return array(
     'App\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
     'App\\Http\\Controllers\\Auth\\VerificationController' => $baseDir . '/app/Http/Controllers/Auth/VerificationController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-<<<<<<< HEAD
-    'App\\Http\\Controllers\\DashboardController' => $baseDir . '/app/Modules/dashboard/DashboardController.php',
-=======
     'App\\Http\\Controllers\\Module\\Admin\\DashboardController' => $baseDir . '/app/Http/Controllers/Module/Admin/DashboardController.php',
->>>>>>> 59a10f3e77b80afd07072e73b27259cf45f94b8c
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
     'App\\Http\\Middleware\\CheckForMaintenanceMode' => $baseDir . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -41,7 +37,7 @@ return array(
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\User_Bank' => $baseDir . '/app/Models/User_Bank.php',
     'App\\Models\\User_Info' => $baseDir . '/app/Models/User_Info.php',
-    'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => $baseDir . '/app/Modules/Admin/Dashboard/Controllers/DashboardController.php',
+    'App\\Modules\\Admin\\Dashboard\\Controllers\\DashboardController' => $baseDir . '/app/Modules/Front/Ecommerce/Controllers/DashboardController.php',
     'App\\Modules\\Admin\\Insights\\Controllers\\InsightsController' => $baseDir . '/app/Modules/Admin/Insights/Controllers/InsightsController.php',
     'App\\Modules\\Admin\\Layouts\\Controllers\\LayoutsController' => $baseDir . '/app/Modules/Admin/Layouts/Controllers/LayoutsController.php',
     'App\\Modules\\Admin\\Login\\Controllers\\LoginController' => $baseDir . '/app/Modules/Admin/Login/Controllers/LoginController.php',
