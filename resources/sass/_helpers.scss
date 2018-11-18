@@ -1,0 +1,170 @@
+.mw-800 {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 15px;
+}
+
+.mb-30px {
+  margin-bottom: rem(30);
+}
+
+.mr-5px {
+  margin-right: rem(5);
+}
+
+.mr-10px {
+  margin-right: rem(10);
+}
+
+.mr-30px {
+  margin-right: rem(30);
+}
+
+.mt-30px {
+  margin-top: rem(30);
+}
+
+.mt-60px {
+  margin-top: rem(60);
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.shadowed {
+  -webkit-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
+  box-shadow: 11px 11px 19px -3px rgba(0,0,0,0.5);
+}
+
+.txt-strong {
+  font-weight: 700;
+}
+
+.txt-light {
+  font-weight: 300;
+}
+
+.txt-err {
+  color: $error;
+}
+
+.ov-x-scroll {
+  overflow-x: auto
+}
+
+.btn--custom {
+  background-color: transparent;
+  border: none;
+  border-right: 1px solid #e1e1e1;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding: 0;
+  position: relative;
+  i {
+    color: $primaryText;
+    margin: 0 10px;
+    transition: color 0.2s ease-in;
+    vertical-align: middle;
+  }
+  &:hover i {
+    color: $primary;
+  }
+}
+
+
+.btn--custom2 {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  border-right: 1px solid #e1e1e1;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  transition: background-color 0.2s ease-in;
+  width: 40px;
+  i {
+    color: $primaryText;
+    margin: 0;
+    transition: color 0.2s ease-in;
+    vertical-align: middle;
+  }
+  &:hover {
+    background-color: $primary;
+  }
+  &:hover i {
+    color: $light;
+  }
+}
+
+.form-group {
+  input, textarea {
+    border: 1px solid $muted;
+    border-radius: 8px;
+    display: block;
+    font-weight: 300;
+    outline: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+
+}
+
+.btn--link {
+  background-color: transparent;
+  border: 1px solid $muted;
+  border-radius: rem(30);
+  color: $primaryText;
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: 400;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
+  text-align: center;
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
+  }
+}
+
+.btn--primary-bordered {
+  background-color: $light;
+  border: 1px solid $primary;
+  color: $primary;
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(18);
+  font-weight: 400;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
+  text-align: center;
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    text-decoration: none;
+  }
+}
+
+@media(max-width: 991px ) {
+  .mt-md-30 {
+    margin-top: rem(30);
+  }
+}

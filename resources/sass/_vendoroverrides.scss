@@ -1,0 +1,61 @@
+body {
+    .app {
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &.swal2-shown {
+        .app {
+            filter: blur(3px);
+        }
+    }
+    .swal2-container {
+        &.swal2-shown {
+            background-color: transparent;
+        }
+
+        .swal2-popup {
+            border-radius: 20% 2% 20% 2%;
+            box-shadow: 5px 5px 20px -5px rgba(0,0,0,0.5);
+        }
+    }
+}
+
+// Bootstrap - Buttons
+.btn {
+    margin: 2px 0;
+    .material-icons {
+        font-size: 1.5em;
+        margin: 0 8px 0 0px;
+        vertical-align: middle;
+    }
+}
+
+// Bootstrap - Container
+.app--template-sidebar .container-fluid {
+    padding: 0 30px;
+}
+
+// Datatables - Tables
+.dataTables_wrapper {
+    .dataTables_length {
+        select {
+            appearance: none;
+            border: 1px solid #dee2e4;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+    .dataTables_filter {
+        input {
+            appearance: none;
+            border: 1px solid #dee2e4;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    }
+}
+
+// Datatables 
+.table-striped tbody tr:nth-of-type(odd),
+.table-hover tbody tr:hover {
+    background-color: rgb(240, 240, 249);
+}

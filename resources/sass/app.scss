@@ -1,14 +1,38 @@
-
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import '~font-awesome/css/font-awesome.min.css';
 
 // Variables
+@import 'mixins';
 @import 'variables';
+@import 'helpers';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~datatables/media/css/jquery.dataTables.css';
 
-.navbar-laravel {
+html,body {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  color: $primaryText;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
+
+// Global
+@import './vendoroverrides';
+@import './hmpanel';
+@import './overlay';
+@import './panel';
+@import './media';
+
+// Admin
+@import './admin/template/sidebar-template';
+@import './admin/components/pageheader';
+@import './admin/page-seller-login';
+@import './admin/page-seller-signup';
+
+// Front 
+@import './front/header';
+@import './front/main';

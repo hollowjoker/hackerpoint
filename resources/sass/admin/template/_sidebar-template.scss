@@ -1,0 +1,256 @@
+/**
+ * Sidebar Template
+ */
+.app--template-sidebar {
+
+    //  Header
+    .app-header {
+        background-color: #fff;
+        box-shadow: 0 2px 20px -5px rgba(0,0,0,0.25);
+        display: flex;
+            align-items: center;
+        min-height: 60px;
+        padding: 0 30px;
+        position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 998;
+        width: 100%;
+
+        &__logo {
+            height: 40px;
+
+            img {
+                max-height: 100%;
+            }
+        }
+
+        &__menu {
+            margin-left: auto;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &__menu-toggle {
+            cursor: pointer;
+            display: none;
+            height: 40px;
+            margin: auto 0;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            width: 30px;
+
+            &::after {
+                content: 'MENU';
+                font-size: 11px;
+                font-weight: 300;
+                line-height: 1em;
+                position: absolute;
+                    bottom: 0;
+                    left: -25%;
+                text-align: center;
+                width: 150%;
+            }
+
+            span {
+                background: #5f5ce2;
+                border-radius: 10px;
+                display: block;
+                height: 2px;
+                opacity: 1;
+                position: absolute;
+                    left: 0;
+                transform: rotate(0deg);
+                transition: .25s ease-in-out;
+                width: 100%;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+                &:nth-child(2) {
+                    top: 10px;
+                }
+                &:nth-child(3) {
+                    top: 10px;
+                }
+                &:nth-child(4) {
+                    top: 20px;
+                }
+            }
+            // is toggled
+            &.open {
+                span:nth-child(1) {
+                    top: 12px;
+                    left: 50%;
+                    width: 0%;
+                }
+                span:nth-child(2) {
+                    transform: rotate(45deg);
+                }
+                span:nth-child(3) {
+                    transform: rotate(-45deg);
+                }
+                span:nth-child(4) {
+                    top: 12px;
+                    left: 50%;
+                    width: 0%;
+                }
+            }
+            @media (max-width: 991px) {
+                display: inline-block;
+            }
+        }
+
+        &__profile {
+            position: relative;
+
+            &-photo {
+                margin-right: 8px;
+                max-width: 100%;
+                width: 40px;
+            }
+
+            &-name {
+                cursor: pointer;
+                display: inline-block;
+                padding: 20px 0;
+                text-decoration:  none;
+
+                &:hover {
+                    color: #684AEE;
+                }
+                
+                .material-icons {
+                    margin-top: -4px;
+                    vertical-align: middle;
+                }
+
+                &-dropdown {
+                    background-color: #fff;
+                    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+                    display: none;
+                    list-style-type: none;
+                    padding: 0;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    margin: 0;
+                    width: 175px;
+    
+                    li {
+                        display: block;
+    
+                        a {
+                            color: #000;
+                            display: block;
+                            padding: 8px 15px;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: #f0f0f9;
+                                color: #6750f2;
+                            }
+                        }
+                    }
+                }
+
+                &:hover .app-header__profile-name-dropdown {
+                    display: block;
+                }
+            }
+
+            @media (max-width: 991px) {
+                border-radius: 50px;
+                position: fixed;
+                top: 78px;
+                right: 30px;
+                z-index: 1;
+                background-color: #f3f3f3;
+                padding: 0 15px;
+            }
+        }
+    }
+
+    //  Sidebar
+    .app-sidebar {
+        background: #444;
+        background-color: #fafafa;
+        display: block;
+        height: 100vh;
+        overflow-y: scroll;
+        max-width: 80%;
+        padding: 30px 25px;
+        position: fixed;
+            top: 61px;
+            left: 0;
+            z-index: 997;
+        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        width: 250px;
+
+        &__menu {
+            margin-bottom: 30px;
+            margin-left: auto;
+
+            &-label {
+                color: $primary;
+                font-weight: bold;
+            }
+
+            &-navigation {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                
+                .material-icons {
+                    color: #777;
+                    font-size: 25px;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                }
+
+                li {
+                    display: block;
+
+                    a {
+                        color: #fff;
+                        color: #000;
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 991px) {
+            transform: translateX(-100%);
+            z-index: 998;
+            
+            &.open {
+                box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.25);
+                transform: translateX(0);
+            }
+        }
+    }
+
+    //  Content
+    .app-content {
+        margin-left: 250px;
+        position: relative;
+        top: 61px;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        @media (max-width: 991px) {
+            margin-left: 0;
+        }
+    }
+}
+
