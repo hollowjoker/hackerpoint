@@ -9,7 +9,7 @@
                     <li><a href="#">Products</a></li>
                 </ul>
             </div>
-            <form action=" {{ route('products.create') }} " method="post" id="form-add-item" data-relocation=" {{ route('products.index') }} ">
+            <form action=" {{ route('admin.products.create') }} " method="post" id="form-add-item" data-relocation=" {{ route('admin.products.index') }} ">
                 {!! csrf_field() !!}
                 <div class="row">
                     <div class="col-md-6">

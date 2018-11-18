@@ -1,6 +1,6 @@
 <header class="app-header">
     <div class="app-header__logo">
-        <a href="#"><img src="{{ URL::asset('/images/placeholder-logo.png') }}" alt="Logo" /></a>
+        <a href="/"><img src="{{ URL::asset('/images/placeholder-logo.png') }}" alt="Logo" /></a>
     </div>
     <div class="app-header__menu">
         <ul>

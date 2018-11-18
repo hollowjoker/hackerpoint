@@ -36,7 +36,7 @@
                 <span class="hm-media__label-000">Featured</span>
                 <div class="hm-media__meta">
                     <span class="hm-media__meta-label-100">Jolibee</span>
-                    <span class="hm-media__meta-label-101">1pc. Chicken with Rich and Macaroni Soup</span>
+                    <span class="hm-media__meta-label-101">1pc. Chicken with Rice and Macaroni Soup</span>
                     <span class="hm-media__meta-label-102">Remaining: 5</span>
                     <span class="hm-media__meta-label-103">PHP 100.00</span>
                 </div>

@@ -34160,7 +34160,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('scroll', function (e)
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function (e) {
   if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').hasClass('admin')) {
-    ADMIN.ready();
+    ADMIN.load();
   } else {
     FRONT.load(e);
   }
@@ -34199,28 +34199,29 @@ var Admin = function () {
     key: 'ready',
     value: function ready() {
       console.log('admin');
-      this.initDataTable();
+      this.initTableOrders();
       this.initLogin();
       this.initInsights();
       this.initCreateItem();
       this.initAppHeaderMenuToggle();
     }
   }, {
-    key: 'initDataTable',
-    value: function initDataTable() {
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtDashboard').DataTable({
-        processing: true,
-        serverSide: true,
-        responsive: true,
-        searching: true,
-        autoWidth: false,
-        ajax: {
-          url: __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtDashboard').attr('data-location')
-        },
-        error: function error(returnData) {
-          console.log(returnData);
-        }
-      });
+    key: 'initTableOrders',
+    value: function initTableOrders() {
+      // $('#dtOrders').DataTable({
+      //   processing : true,
+      //   serverSide : true,
+      //   responsive : true,
+      //   searching : true,
+      //   autoWidth : false,
+      //   ajax : {
+      //     url : $('#dtOrders').data('url'),
+      //   },
+      //   error : function(returnData){
+      //     console.log(returnData);
+      //   }
+      // });
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtOrders').DataTable();
     }
   }, {
     key: 'initAppHeaderMenuToggle',
@@ -34341,13 +34342,11 @@ var Admin = function () {
           cache: false,
           processData: false
         }).done(function (returnData) {
-          console.log(returnData);
-          // if(returnData.type == 'success'){
-          //   window.location.href = relocation;
-          // }
-          // else{
-          //   alert(returnData.message);
-          // }
+          if (returnData.type == 'success') {
+            window.location.href = relocation;
+          } else {
+            alert(returnData.message);
+          }
         });
         return false;
       });

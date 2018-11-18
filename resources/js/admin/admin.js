@@ -10,27 +10,28 @@ export default class Admin {
 
   ready () {
     console.log('admin');
-    this.initDataTable();
+    this.initTableOrders();
     this.initLogin();
     this.initInsights();
     this.initCreateItem();
     this.initAppHeaderMenuToggle();
   }
 
-  initDataTable() {
-    $('#dtDashboard').DataTable({
-      processing : true,
-      serverSide : true,
-      responsive : true,
-      searching : true,
-      autoWidth : false,
-      ajax : {
-        url : $('#dtDashboard').attr('data-location'),
-      },
-      error : function(returnData){
-        console.log(returnData);
-      }
-    });
+  initTableOrders() {
+    // $('#dtOrders').DataTable({
+    //   processing : true,
+    //   serverSide : true,
+    //   responsive : true,
+    //   searching : true,
+    //   autoWidth : false,
+    //   ajax : {
+    //     url : $('#dtOrders').data('url'),
+    //   },
+    //   error : function(returnData){
+    //     console.log(returnData);
+    //   }
+    // });
+    $('#dtOrders').DataTable();
   }
   
   initAppHeaderMenuToggle() {
@@ -154,13 +155,12 @@ export default class Admin {
         cache: false,
         processData:false,
       }).done(function(returnData){
-        console.log(returnData);
-        // if(returnData.type == 'success'){
-        //   window.location.href = relocation;
-        // }
-        // else{
-        //   alert(returnData.message);
-        // }
+        if(returnData.type == 'success'){
+          window.location.href = relocation;
+        }
+        else{
+          alert(returnData.message);
+        }
       });
       return false;
     });
