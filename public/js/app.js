@@ -34199,7 +34199,7 @@ var Admin = function () {
     key: 'ready',
     value: function ready() {
       console.log('admin');
-      this.initDataTable();
+      this.initTableOrders();
       this.initLogin();
       this.initInsights();
       this.initCreateItem();
@@ -34207,21 +34207,22 @@ var Admin = function () {
       this.initProducts();
     }
   }, {
-    key: 'initDataTable',
-    value: function initDataTable() {
-      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtDashboard').DataTable({
-        processing: true,
-        serverSide: true,
-        responsive: true,
-        searching: true,
-        autoWidth: false,
-        ajax: {
-          url: __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtDashboard').attr('data-location')
-        },
-        error: function error(returnData) {
-          console.log(returnData);
-        }
-      });
+    key: 'initTableOrders',
+    value: function initTableOrders() {
+      // $('#dtOrders').DataTable({
+      //   processing : true,
+      //   serverSide : true,
+      //   responsive : true,
+      //   searching : true,
+      //   autoWidth : false,
+      //   ajax : {
+      //     url : $('#dtOrders').data('url'),
+      //   },
+      //   error : function(returnData){
+      //     console.log(returnData);
+      //   }
+      // });
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#dtOrders').DataTable();
     }
   }, {
     key: 'initAppHeaderMenuToggle',
@@ -62892,6 +62893,7 @@ var Front = function () {
   _createClass(Front, [{
     key: 'ready',
     value: function ready() {
+      this.navigateHomeMobile(this.homeNavItem);
       if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).width() >= 992) {
         if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main.home').length) {
           this.setHomeSections(this.homeSections);
@@ -62902,8 +62904,6 @@ var Front = function () {
         __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle').click(function (e) {
           __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle, .header').toggleClass('opened');
         });
-
-        this.navigateHomeMobile(this.homeNavItem);
       }
     }
   }, {
@@ -62922,6 +62922,7 @@ var Front = function () {
     key: 'load',
     value: function load(e) {
       __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.page-loader-wrapper').fadeOut();
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').removeClass('no-scroll');
     }
   }, {
     key: 'convertToArray',

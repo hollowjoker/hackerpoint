@@ -20,7 +20,7 @@
             var test = window.location.origin;
         </script>
     </head>
-    <body class="front">
+    <body class="front no-scroll">
         <div class="page-loader-wrapper">
             <div class="page-loader">
                 <div class="page-loader-bounce"></div>

@@ -14,8 +14,8 @@
                         <div class="panel__body">
                             <h4>Add your items</h4>
                             <p>Create and manage your items in one place.</p>
-                            <a href="#" class="btn btn-primary">Add Item</a>
-                            <a href="#" class="btn">View Items</a>
+                            <a href="{{ route('admin.products.index') }}" class="btn btn-primary">Add Item</a>
+                            <a href="{{ route('admin.products.index') }}" class="btn">View Items</a>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         <div class="panel__body">
                             <h4>See your store insights</h4>
                             <p>Check/review your store's analytics in an easy and convenient way.</p>
-                            <a href="#" class="btn btn-primary">View Insights</a>
+                            <a href="{{ route('admin.insights.index') }}" class="btn btn-primary">View Insights</a>
                         </div>
                     </div>
                 </div>

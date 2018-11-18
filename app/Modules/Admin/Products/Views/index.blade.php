@@ -7,8 +7,15 @@
         <ul class="page-header__crumbs">
             <li><a href="#">Products</a></li>
         </ul>
-    </div>
-    <div class="row" data-route=" {{ route('admin.products.showList') }} " id="item-list">
+	</div>
+	<div class="row">
+		<div class="col-12 text-right">
+			<a  href=" {{ route('admin.products.showForm') }} ">
+				<button class="btn btn-primary" type="button">Add Item</button>
+			</a>
+		</div>
+	</div>
+    <div class="row mt-2" data-route=" {{ route('admin.products.showList') }} " id="item-list">
         {{-- <div class="col-xl-4 col-lg-6 col-md-6 mb-3">
             <div class="hm-media">
                 <div class="hm-media__featured-image">

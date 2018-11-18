@@ -6,7 +6,7 @@
     //  Header
     .app-header {
         background-color: #fff;
-        box-shadow: 0 0 20px -5px rgba(0,0,0,0.25);
+        box-shadow: 0 2px 20px -5px rgba(0,0,0,0.25);
         display: flex;
             align-items: center;
         min-height: 60px;
@@ -14,7 +14,7 @@
         position: fixed;
             top: 0;
             left: 0;
-            z-index: 999;
+            z-index: 998;
         width: 100%;
 
         &__logo {
@@ -186,7 +186,7 @@
         position: fixed;
             top: 61px;
             left: 0;
-            z-index: 998;
+            z-index: 997;
         transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
         width: 250px;
 
@@ -232,9 +232,10 @@
 
         @media (max-width: 991px) {
             transform: translateX(-100%);
+            z-index: 998;
             
             &.open {
-                box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.25);
+                box-shadow: 0 20px 20px -5px rgba(0, 0, 0, 0.25);
                 transform: translateX(0);
             }
         }

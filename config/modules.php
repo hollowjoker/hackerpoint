@@ -8,13 +8,15 @@ return [
             'Layouts',
             'Insights',
             'Products',
-            'Orders'
+            'Orders',
+            'Registration'
         ],
         'Front' => [
             'Home',
             'Cart',
             'Checkout',
             'Dashboard',
+            'Shop'
         ],
     ],
 ];

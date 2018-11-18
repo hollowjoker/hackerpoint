@@ -84,10 +84,10 @@ class ProductsController extends Controller
 
         $dataList = CF::model('item')
             ->leftJoin('users','users.id','items.user_id')
-            ->leftJoin('stores','stores.user_id','users.id')
+            ->leftJoin('stores','stores.id','items.store_id')
             ->limit(10)
             ->where([
-                ['users.id',$user->id],
+                ['items.user_id',$user->id],
             ])
             ->orderBy('items.created_at','desc')
             ->select(
@@ -95,14 +95,16 @@ class ProductsController extends Controller
                 'stores.store_name','items.qr_file'
             )
             ->get();
+
         if(count($dataList)){
-            foreach($dataList as $k => $each){
-                $data[$k]['id'] = $each->id;
-                $data[$k]['store_name'] = $each->store_name;
-                $data[$k]['price'] = number_format($each->price,2);
-                $data[$k]['qty'] = $each->qty;
-                $data[$k]['item_name'] = $each->item_name;
-                $data[$k]['qr_file'] = Storage::url($each->qr_file);
+            $i = 0;
+            foreach($dataList as $i => $each){
+                $data[$i]['id'] = $each->id;
+                $data[$i]['store_name'] = $each->store_name;
+                $data[$i]['price'] = number_format($each->price,2);
+                $data[$i]['qty'] = $each->qty;
+                $data[$i]['item_name'] = $each->item_name;
+                $data[$i]['qr_file'] = Storage::url($each->qr_file);
             }
         }
 
