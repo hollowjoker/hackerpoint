@@ -20,7 +20,7 @@ $(window).on('scroll', e => {
 
 $(window).on('load', e => {
   if ($('body').hasClass('admin')) {
-    ADMIN.ready()
+    ADMIN.load()
   } else {
     FRONT.load(e)
   }

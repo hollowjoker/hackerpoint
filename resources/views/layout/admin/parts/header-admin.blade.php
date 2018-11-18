@@ -13,9 +13,9 @@
     <div class="app-header__profile">
         <img src="{{ URL::asset('/images/placeholder-face.png') }}" alt="#" class="app-header__profile-photo" />
         <div class="app-header__profile-name">
-            Red Ribbon <i class="material-icons">arrow_drop_down</i>
+            {{ Auth::guard('admin')->user()->email }} <i class="material-icons">arrow_drop_down</i>
             <ul class="app-header__profile-name-dropdown">
-                <li><a href="#">Settings</a></li>
+                {{-- <li><a href="#">Settings</a></li> --}}
             <li><a href="{{ route('admin.logout') }}">Logout</a></li>
             </ul>
         </div>

@@ -57,6 +57,7 @@ class UserController extends Controller
     }
 
     public function getItem(){
+        return 1;
         // $client = new Client(); //GuzzleHttp\Client
         // $result = $client->post('http://localhost:8000/api/postItem', [
         //     'form_params' => [
@@ -65,5 +66,9 @@ class UserController extends Controller
         // ]);
 
         // return $result;
+    }
+
+    public function likeItem() {
+        return 1;
     }
 }

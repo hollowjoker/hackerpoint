@@ -18,6 +18,10 @@ class ProductsController extends Controller
         return view($this::$view_path.'index');
     }
 
+    public function showForm() {
+        return view($this::$view_path.'add');
+    }
+
     public function create(Request $request) {
         $data = [];
         $user = Auth::guard('admin')->user();
@@ -72,6 +76,39 @@ class ProductsController extends Controller
         $data['type'] = 'success';
 
         return response()->json($data);;
+    }
+
+    public function showList() {
+        $data = [];
+        $user = Auth::guard('admin')->user();
+
+        $dataList = CF::model('item')
+            ->leftJoin('users','users.id','items.user_id')
+            ->leftJoin('stores','stores.user_id','users.id')
+            ->limit(10)
+            ->where([
+                ['users.id',$user->id],
+            ])
+            ->orderBy('items.created_at','desc')
+            ->select(
+                'items.price','items.qty','items.item_name','items.id',
+                'stores.store_name','items.qr_file'
+            )
+            ->get();
+        if(count($dataList)){
+            foreach($dataList as $k => $each){
+                $data[$k]['id'] = $each->id;
+                $data[$k]['store_name'] = $each->store_name;
+                $data[$k]['price'] = number_format($each->price,2);
+                $data[$k]['qty'] = $each->qty;
+                $data[$k]['item_name'] = $each->item_name;
+                $data[$k]['qr_file'] = Storage::url($each->qr_file);
+            }
+        }
+
+        return $data;
+
+        return response()->json($data); 
     }
 
     

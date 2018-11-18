@@ -15,6 +15,7 @@ export default class Admin {
     this.initInsights();
     this.initCreateItem();
     this.initAppHeaderMenuToggle();
+    this.initProducts();
   }
 
   initDataTable() {
@@ -154,15 +155,45 @@ export default class Admin {
         cache: false,
         processData:false,
       }).done(function(returnData){
-        console.log(returnData);
-        // if(returnData.type == 'success'){
-        //   window.location.href = relocation;
-        // }
-        // else{
-        //   alert(returnData.message);
-        // }
+        if(returnData.type == 'success'){
+          window.location.href = relocation;
+        }
+        else{
+          alert(returnData.message);
+        }
       });
       return false;
+    });
+  }
+
+  initProducts() {
+    // Revenue
+    $.ajax({
+      url : $('#item-list').attr('data-route'),
+      type : 'get',
+    }).done(function(returnData){
+      var length = !!returnData ? returnData.length : 0;
+      let toAppend = '';
+      if(length){
+        $.each(returnData,function(k,v){
+          toAppend +=  '<div class="col-xl-4 col-lg-6 col-md-6 mb-3">'+
+                          '<div class="hm-media">'+
+                              '<div class="hm-media__featured-image">'+
+                                  '<img src="'+URL+v.qr_file+'" alt="">'+
+                              '</div>'+
+                              '<span class="hm-media__label-000">Featured</span>'+
+                              '<div class="hm-media__meta">'+
+                                  '<span class="hm-media__meta-label-100">'+v.store_name+'</span>'+
+                                  '<span class="hm-media__meta-label-101">'+v.item_name+'</span>'+
+                                  '<span class="hm-media__meta-label-102">Remaining: '+v.qty+'</span>'+
+                                  '<span class="hm-media__meta-label-103">PHP '+v.price+'</span>'+
+                              '</div>'+
+                          '</div>'+
+                      '</div>';
+        });
+
+        $('#item-list').append(toAppend);
+      }
     });
   }
 }

@@ -34160,7 +34160,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('scroll', function (e)
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).on('load', function (e) {
   if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').hasClass('admin')) {
-    ADMIN.ready();
+    ADMIN.load();
   } else {
     FRONT.load(e);
   }
@@ -34204,6 +34204,7 @@ var Admin = function () {
       this.initInsights();
       this.initCreateItem();
       this.initAppHeaderMenuToggle();
+      this.initProducts();
     }
   }, {
     key: 'initDataTable',
@@ -34341,15 +34342,32 @@ var Admin = function () {
           cache: false,
           processData: false
         }).done(function (returnData) {
-          console.log(returnData);
-          // if(returnData.type == 'success'){
-          //   window.location.href = relocation;
-          // }
-          // else{
-          //   alert(returnData.message);
-          // }
+          if (returnData.type == 'success') {
+            window.location.href = relocation;
+          } else {
+            alert(returnData.message);
+          }
         });
         return false;
+      });
+    }
+  }, {
+    key: 'initProducts',
+    value: function initProducts() {
+      // Revenue
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajax({
+        url: __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#item-list').attr('data-route'),
+        type: 'get'
+      }).done(function (returnData) {
+        var length = !!returnData ? returnData.length : 0;
+        var toAppend = '';
+        if (length) {
+          __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.each(returnData, function (k, v) {
+            toAppend += '<div class="col-xl-4 col-lg-6 col-md-6 mb-3">' + '<div class="hm-media">' + '<div class="hm-media__featured-image">' + '<img src="' + URL + v.qr_file + '" alt="">' + '</div>' + '<span class="hm-media__label-000">Featured</span>' + '<div class="hm-media__meta">' + '<span class="hm-media__meta-label-100">' + v.store_name + '</span>' + '<span class="hm-media__meta-label-101">' + v.item_name + '</span>' + '<span class="hm-media__meta-label-102">Remaining: ' + v.qty + '</span>' + '<span class="hm-media__meta-label-103">PHP ' + v.price + '</span>' + '</div>' + '</div>' + '</div>';
+          });
+
+          __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#item-list').append(toAppend);
+        }
       });
     }
   }]);
