@@ -62873,6 +62873,7 @@ var Front = function () {
   _createClass(Front, [{
     key: 'ready',
     value: function ready() {
+      this.navigateHomeMobile(this.homeNavItem);
       if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).width() >= 992) {
         if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()('.main.home').length) {
           this.setHomeSections(this.homeSections);
@@ -62883,8 +62884,6 @@ var Front = function () {
         __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle').click(function (e) {
           __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.menu-toggle, .header').toggleClass('opened');
         });
-
-        this.navigateHomeMobile(this.homeNavItem);
       }
     }
   }, {
@@ -62903,6 +62902,7 @@ var Front = function () {
     key: 'load',
     value: function load(e) {
       __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.page-loader-wrapper').fadeOut();
+      __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body').removeClass('no-scroll');
     }
   }, {
     key: 'convertToArray',

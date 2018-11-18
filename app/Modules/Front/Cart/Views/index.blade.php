@@ -83,7 +83,23 @@
       </div>
       <div class="row mt-30px justify-content-end">
         <div class="col-md-12 col-lg-6">
-          <a href="/checkout" class="btn--primary-bordered">Proceed to Checkout</button>
+          <input type="checkbox" name="credit-box" id="credit-box">
+          <label for="credit-box"><span>Redeem your credits</span></label>
+          <div class="credit-err txt-err d-flex align-items-center">
+            <i class="material-icons">error</i>
+            <span>You don't have enought credits. Credits are earned by purchasing products or services.</span>
+          </div>
+          <div class="credit-valid">
+            <select name="creadit-choice" id="">
+              <option value="1">600 credits (5% discount)</option>
+              <option value="2">1000 credits (10% discount)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-30px justify-content-end">
+        <div class="col-md-12 col-lg-6">
+          <a href="/checkout" class="btn--primary-bordered">Proceed to Checkout</a>
         </div>
       </div>
     </div>

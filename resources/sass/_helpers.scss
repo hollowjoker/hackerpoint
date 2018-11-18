@@ -16,6 +16,10 @@
   margin-right: rem(10);
 }
 
+.mr-30px {
+  margin-right: rem(30);
+}
+
 .mt-30px {
   margin-top: rem(30);
 }
@@ -26,6 +30,10 @@
 
 .no-border {
   border: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .shadowed {
@@ -40,6 +48,10 @@
 
 .txt-light {
   font-weight: 300;
+}
+
+.txt-err {
+  color: $error;
 }
 
 .ov-x-scroll {

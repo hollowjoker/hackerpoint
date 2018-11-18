@@ -1,6 +1,59 @@
 @extends('layout.front.master')
 @section('content')
 <div class="main checkout">
+  <section class="section section-order-summary">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="order-summary-wrapper">
+            <h2 class="text-center"><span class="txt-strong">ORDER</span><span class="txt-light">Summary</span></h2>
+            <div class="row">
+              <div class="col-12">
+                <div class="order-summary-item">
+                  <table class="cart__table">
+                    <tbody>
+                      <tr>
+                        <td class="no-border text-left">Store</td>
+                        <td class="no-border text-right cart__table--total">Store name</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left text-muted">Items</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left">Item1</td>
+                        <td class="no-border text-right cart__table--total">&#8369; 500.00</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left">Item2</td>
+                        <td class="no-border text-right cart__table--total">&#8369; 500.00</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left">Subtotal</td>
+                        <td class="no-border text-right cart__table--total">&#8369; 1000.00</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left">Discounts</td>
+                        <td class="no-border text-right cart__table--total">&#8369; 50.00 (5% discount, 600 credits)</td>
+                      </tr>
+                      <tr>
+                        <td class="no-border text-left">Total</td>
+                        <td class="no-border text-right cart__table--total">&#8369; 950.00</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="row mt-30px">
+                    <div class="col-md-12 col-lg-6">
+                      <button class="btn--primary-bordered place-order-btn">Place order</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="contact" class="section section-contact d-flex align-items-center">
     <div class="container">
       <div class="row">
@@ -47,3 +100,4 @@
     </div>
   </section>
 </div>
+@stop

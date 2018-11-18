@@ -458,6 +458,10 @@ table.dataTable td {
   margin-right: 0.71428571rem;
 }
 
+.mr-30px {
+  margin-right: 2.14285714rem;
+}
+
 .mt-30px {
   margin-top: 2.14285714rem;
 }
@@ -468,6 +472,10 @@ table.dataTable td {
 
 .no-border {
   border: none !important;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .shadowed {
@@ -481,6 +489,10 @@ table.dataTable td {
 
 .txt-light {
   font-weight: 300;
+}
+
+.txt-err {
+  color: #B12D24;
 }
 
 .ov-x-scroll {
@@ -12095,18 +12107,22 @@ body .swal2-container .swal2-popup {
   margin-bottom: 30px;
 }
 
-.main.cart {
+.main.cart,
+.main.checkout,
+.main.shop {
   padding-top: 75px;
 }
 
-.main.cart .section {
+.main.cart .section,
+.main.checkout .section,
+.main.shop .section {
   background-color: #fff;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-box-shadow: none;
           box-shadow: none;
-  min-height: 100vh;
+  min-height: 0;
   padding-top: 75px;
   position: relative;
 }
@@ -12129,5 +12145,35 @@ body .swal2-container .swal2-popup {
   font-weight: 500;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+.main .order-summary-wrapper {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 60%;
+  padding: 10px 15px;
+}
+
+@media (max-width: 991px) {
+  .main .order-summary-wrapper {
+    max-width: 100%;
+    overflow: auto;
+  }
+}
+
+.main .order-summary-item {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
+@media (max-width: 767px) {
+  .main .order-summary-item {
+    max-width: 100%;
+  }
+}
+
+.main .section-shop-wrapper .section-shop__grid-item {
+  width: 25%;
 }
 
